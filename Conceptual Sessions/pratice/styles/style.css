@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: hsla(60, 79%, 72%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(60, 79%, 72%, 1) 36%,
+    hsla(216, 40%, 58%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(60, 79%, 72%, 1) 36%,
+    hsla(216, 40%, 58%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(60, 79%, 72%, 1) 36%,
+    hsla(216, 40%, 58%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F07D", endColorstr="#698CBF", GradientType=1 );
+}
+.header {
+  width: 80%;
+  margin: auto;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(236, 236, 94, 0.87);
+}
+.links ul {
+  display: flex;
+  gap: 4rem;
+}
+.header li {
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+  color: rgba(247, 198, 138, 0.905);
+}
+.hero-section {
+  margin: 3rem auto;
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.7rem;
+}
+.leftHeading h2 {
+  font-size: 2.7rem;
+  font-weight: bolder;
+}
+.leftSmallHeading h4 {
+  color: rgba(239, 96, 96, 0.721);
+}
+.leftButton button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.4rem;
+  background-color: #ff1b6b;
+}
+.right img {
+  width: 20rem;
+  background: hsla(55, 66%, 49%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(55, 66%, 49%, 1) 19%,
+    hsla(216, 40%, 58%, 1) 86%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(55, 66%, 49%, 1) 19%,
+    hsla(216, 40%, 58%, 1) 86%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(55, 66%, 49%, 1) 19%,
+    hsla(216, 40%, 58%, 1) 86%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D1C42B", endColorstr="#698cbf", GradientType=1 );
+  clip-path: polygon(
+    50% 0%,
+    83% 12%,
+    100% 43%,
+    94% 78%,
+    68% 100%,
+    32% 100%,
+    6% 78%,
+    0% 43%,
+    17% 12%
+  );
+}
