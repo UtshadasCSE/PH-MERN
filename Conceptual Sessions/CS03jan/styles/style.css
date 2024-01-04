@@ -4,11 +4,15 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+body {
+  background-color: bisque;
+}
 .hero {
   background-image: url("../images/climper.jpg");
   height: 100vh;
   background-position: bottom center;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 51% 100%, 51% 100%, 0 68%);
 }
 .hero h2 {
   font-family: cursive;
@@ -18,14 +22,20 @@
   text-align: center;
   padding-top: 100px;
 }
-.article {
+.article,
+.type-cow {
   width: 80%;
   margin: 60px auto;
   padding: 60px;
-  background-color: rgba(140, 226, 226, 0.414);
+  background: linear-gradient(
+    45deg,
+    rgb(162, 125, 132),
+    rgba(113, 64, 64, 0.512)
+  );
   border: 2px solid salmon;
 }
-.article h2 {
+.article h2,
+.type-cow h2 {
   font-size: 40px;
   text-align: center;
   border-bottom: 1px solid rgb(232, 136, 52);
@@ -39,4 +49,14 @@
 .article p .imp {
   font-size: 2rem;
   background-color: yellow;
+}
+
+.type-cow img {
+  width: 200px;
+}
+.flex-cow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
