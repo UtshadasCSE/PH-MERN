@@ -118,3 +118,30 @@
     17% 12%
   );
 }
+.footer {
+  width: 80%;
+  margin: 8.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .footLeft {
+  width: 40%;
+  height: 0.3vh;
+  background-color: #93747fc6;
+}
+.footer .footRight {
+  width: 40%;
+  height: 0.3vh;
+  background-color: #93747fc6;
+}
+
+.footer .footMiddle {
+  font-size: 1.3rem;
+}
+.footer .footMiddle i {
+  background-color: #ff1b6b;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
