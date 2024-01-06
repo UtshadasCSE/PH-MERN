@@ -180,3 +180,28 @@ main {
   align-items: center;
   text-align: center;
 }
+footer {
+  display: flex;
+  background: #fff8f3;
+
+  gap: 100px;
+  padding: 130px 230px;
+}
+.footer-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer-form input,
+textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 20px 70px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+}
