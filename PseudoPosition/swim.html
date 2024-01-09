@@ -25,12 +25,23 @@
         position: absolute;
       }
       .water {
-        top: -30px;
+        top: -60px;
+      }
+      h2::after {
+        content: " video";
+        font-size: 10px;
+      }
+      h2::first-letter {
+        font-size: 30px;
+      }
+      ::selection {
+        color: aqua;
       }
     </style>
   </head>
   <body>
     <div class="swim-container">
+      <h2>Swiming</h2>
       <div class="box boy">
         <img src="swim/boy.svg" alt="" />
       </div>
