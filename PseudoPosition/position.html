@@ -4,6 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .swim-container {
+        position: relative;
+      }
+      .box {
+        border: 2px dotted plum;
+        width: 200px;
+      }
+      .dummy {
+        height: 200px;
+        width: 300px;
+        border: 2px solid salmon;
+      }
+      /* .ring {
+        position: absolute;
+        left: 50px;
+        top: 30px;
+      } */
+      .ring {
+        position: sticky;
+        top: 0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h3>CSS Position</h3>
+    <ol>
+      <!-- flow related  -->
+      <li>Static</li>
+      <li>Relative</li>
+      <li>Absulate</li>
+      <!-- scroll related  -->
+      <li>Fixed</li>
+      <li>Sticky</li>
+      <div class="swim-container">
+        <div class="box boy">
+          <img src="swim/boy.svg" alt="" />
+        </div>
+        <div class="box ring">
+          <img src="swim/ring.svg" alt="" />
+        </div>
+        <div class="box water">
+          <img src="swim/water.svg" alt="" />
+        </div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+      </div>
+    </ol>
+  </body>
 </html>
