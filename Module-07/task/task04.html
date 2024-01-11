@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+      }
+      .one,
+      .two {
+        display: flex;
+        gap: 20px;
+      }
+      @media screen and (max-width: 576px) {
+        .one,
+        .two {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        <div class="left">
+          <img src="../assets/mountain.jpg" alt="" />
+        </div>
+        <div class="right">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            dolores nostrum velit neque eveniet eius, adipisci nobis quas
+            expedita. Assumenda, ducimus qu
+          </p>
+        </div>
+      </div>
+      <div class="two">
+        <div class="left">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            corrupti sed animi? Architecto repellat blanditiis doloremque
+            quisquam, placeat iste adipisci
+          </p>
+        </div>
+        <div class="right">
+          <img src="../assets/mountain.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

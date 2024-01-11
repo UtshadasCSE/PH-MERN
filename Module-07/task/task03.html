@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .one,
+      .two {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .one img,
+      .two img {
+        width: 300px;
+      }
+      @media screen and (max-width: 576px) {
+        .container {
+          max-width: 1440px;
+          width: 70%;
+          margin: auto;
+        }
+        .one img,
+        .two img {
+          width: 100%;
+        }
+        .one,
+        .two {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        <img src="../assets/mountain.jpg" alt="" />
+        <div class="content">
+          <h3>Post title will be there</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            doloribus autem, dolorem dolores laborum sunt dignissimos vel qui
+            tempora error?
+          </p>
+          <button>Read more</button>
+        </div>
+      </div>
+      <div class="two">
+        <img src="../assets/mountain.jpg" alt="" />
+        <div class="content">
+          <h3>Post title will be there</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            doloribus autem, dolorem dolores laborum sunt dignissimos vel qui
+            tempora error?
+          </p>
+          <button>Read more</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
