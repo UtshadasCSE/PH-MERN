@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+/* Common Shared style  */
+.para-content {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem; /* 162.5% */
+}
+/* Nav section style  */
+.navbar {
+  max-width: 1440px;
+  width: 70%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navbar ul > li {
+  list-style: none;
+}
+.navbar .active {
+  color: #ff5400;
+}
+.navbar a {
+  text-decoration: none;
+  color: #424247;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.mobile-menubar {
+  display: none;
+  font-size: 1.4rem;
+}
+/* Hero section Style  */
+.hero-section {
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url("../assets/Images/Group\ 13\ \(1\)\ \(1\).png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  width: 70%;
+  height: 500px;
+  margin: 3rem auto;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+.hero-section h2 {
+  color: #fff;
+  font-size: 5.4rem;
+  font-weight: 700;
+}
+.hero-section p {
+  text-align: center;
+  width: 50%;
+}
+.hero-btn {
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #c8b8b89f;
+  border-radius: 8px;
+}
+.btn-group {
+  width: 160px;
+  padding: 0 0.8rem;
+  display: flex;
+  justify-content: space-evenl;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.btn-group input,
+select {
+  width: 60px;
+  border: none;
+  outline: none;
+  padding: 1rem 1.2rem;
+}
+.btn-find {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 160px;
+  border: none;
+  outline: none;
+  padding: 1rem 1.4rem;
+  border-radius: 8px;
+  background: #ff5400;
+}
+/* popular tours section style  */
+.popular-tours {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+.popular-tours .left {
+  width: 50%;
+}
+.popular-tours .right {
+  width: 50%;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.left h2 {
+  color: #131318;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.left p,
+li {
+  color: rgba(19, 19, 24, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.right img {
+  width: 80%;
+}
+.left button {
+  width: 40%;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 0;
+  border-radius: 8px;
+  background: #ff5400;
+}
+/* Destination Section  */
+.destination {
+  margin-top: 6rem;
+  color: #131318;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.destination p {
+  text-align: center;
+  width: 600px;
+  color: rgba(19, 19, 24, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.destination-grid {
+  margin: auto;
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 270px);
+  /* grid-template-rows: repeat(3, 250px); */
+  gap: 1rem;
+}
+.grid-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.grid-box {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.maldives {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background: url("../assets/Images/Rectangle\ 5.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.indonesia {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background: url("../assets/Images/Rectangle\ 8.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.srilanka {
+  background: url("../assets/Images/Rectangle\ 6.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.north {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background: url("../assets/Images/Rectangle\ 7.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.kashmir {
+  background: url("../assets/Images/Rectangle\ 9.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.ban {
+  background: url("../assets/Images/Rectangle\ 11.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.brazil {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  background: url("../assets/Images/Rectangle\ 10.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+/* choose us section style  */
+.choose-us {
+  margin: 5rem 0;
+}
+.choose-us h2 {
+  color: #131318;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.choose-us p {
+  width: 600px;
+  margin: 1rem auto;
+  color: rgba(19, 19, 24, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem; /* 162.5% */
+}
+.choose-para {
+  text-align: center;
+}
+.choose-flex-container {
+  width: 80%;
+  margin: auto;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.choose-flex-one {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.mar-left {
+  padding: 0.7rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
+}
+.mar-right {
+  padding: 0.7rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  background: rgba(41, 206, 246, 0.05);
+}
+.mar-third {
+  padding: 0.7rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
+}
+.choose-flex-one,
+.choose-flex-two {
+  text-align: start;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+/* Responsive view for mobile devices */
+@media screen and (max-width: 600px) {
+  .navbar ul {
+    display: none;
+  }
+  .mobile-menubar {
+    display: block;
+  }
+  .hero-section {
+    margin: 1rem auto;
+    padding: 2rem 0rem;
+    width: 90%;
+  }
+  .hero-section h2 {
+    font-size: 1.4rem;
+  }
+  .hero-section p {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .hero-btn {
+    flex-direction: column;
+  }
+  .popular-tours {
+    flex-direction: column;
+    width: 100%;
+    /* align-items: start; */
+    /* text-align: start; */
+  }
+  .left {
+    justify-content: flex-start;
+    align-items: start;
+    width: 100%;
+    padding: 0 4rem;
+  }
+  .left h2 {
+    font-size: 1.4rem;
+
+    font-weight: 800;
+  }
+  .left button {
+    width: 100%;
+  }
+  .right {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  }
+  .popular-tours img {
+    width: 100%;
+  }
+  .left p,
+  li {
+    font-size: 0.7rem;
+  }
+
+  .destination h2 {
+    color: #131318;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  .destination p {
+    width: 300px;
+  }
+  .destination-grid {
+    display: flex;
+    flex-direction: column;
+
+    /* grid-template-rows: 50px; */
+  }
+  .grid-box {
+    width: 90%;
+  }
+  .choose-us {
+    margin: 0;
+  }
+  .choose-flex-one {
+    padding: 1rem;
+    margin: auto;
+    width: 10%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-flex-container {
+    width: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
