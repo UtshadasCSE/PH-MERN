@@ -33,6 +33,7 @@
               "btn-bg": "#FF4240",
               "para-color": "rgba(255, 255, 255, 0.60)",
               "para-color-desc": "rgba(19, 19, 24, 0.60)",
+              "grid-one": "url('assets/Images/1 copy.png')",
             },
           },
         },
@@ -46,10 +47,10 @@
     </style>
   </head>
   <body>
-    <header class="w-3/4 mx-auto">
+    <header class="lg:w-3/4 mx-auto max-sm:w-[90%] max-sm:mx-auto">
       <!-- navbar section  -->
       <nav>
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 w-4/5 lg:mx-auto my-4 max-sm:w-[100%]">
           <div class="navbar-start">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -72,29 +73,32 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li><a>Home</a></li>
+                <li class="text-[#FF4240]"><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Pages</a></li>
                 <li><a>Blog</a></li>
                 <li><a>Contact</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <a class="max-sm:text-[1rem] btn btn-ghost text-4xl font-extrabold"
+              >Hackey<span class="text-[#FF4240]">'</span>s</a
+            >
           </div>
           <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <li><a>Home</a></li>
+            <ul class="menu menu-horizontal px-1 font-bold">
+              <li class="text-[#FF4240]"><a>Home</a></li>
               <li><a>About</a></li>
               <li><a>Pages</a></li>
               <li><a>Blog</a></li>
               <li><a>Contact</a></li>
             </ul>
           </div>
-          <div class="navbar-end flex justify-center items-center gap-4">
+          <div class="lg:navbar-end flex justify-center items-center lg:gap-4">
             <div class="hidden md:block lg:block">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a class="btn bg-btn-bg font-manrope text-base text-[#fff]"
+            <a
+              class="max-sm:text[0.5rem] max-sm:ml-0 btn bg-btn-bg font-manrope text-base text-[#fff]"
               >Get Ticket</a
             >
           </div>
@@ -137,7 +141,7 @@
     </header>
     <main>
       <!-- professional hockey's club section  -->
-      <section class="w-3/4 mx-auto flex flex-col gap-6">
+      <section class="w-3/4 mx-auto flex flex-col gap-6 my-20">
         <h2
           class="font-manrope md:text-4xl lg:text-4xl font-extrabold text-center"
         >
@@ -147,6 +151,156 @@
           Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis
           placerat dolor. Purus urna in sit nullam proin.
         </p>
+        <div class="h-1"></div>
+      </section>
+      <!-- progress bar section  -->
+      <section
+        class="max-sm:flex max-sm:flex-col max-sm:gap-9 lg:w-4/5 mx-auto lg:flex lg:justify-center lg:gap-20 lg:items-center my-10"
+      >
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <div
+            class="radial-progress text-[#FF4240]"
+            style="--value: 80"
+            role="progressbar"
+          >
+            80%
+          </div>
+          <h3 class="font-semibold text-[#131318]">Prayer Facility</h3>
+          <p class="max-sm:w-5/6 text-center">
+            Amet consectetur. Condimentum dignissim adipiscing .
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <div
+            class="radial-progress text-[#49D293]"
+            style="--value: 95"
+            role="progressbar"
+          >
+            95%
+          </div>
+          <h3 class="font-semibold text-[#131318]">Experienced Coach</h3>
+          <p class="max-sm:w-5/6 text-center text-para-color-desc">
+            Amet consectetur. Condimentum dignissim adipiscing .
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <div
+            class="radial-progress text-[#FFB546]"
+            style="--value: 90"
+            role="progressbar"
+          >
+            90%
+          </div>
+          <h3 class="font-semibold text-[#131318]">Senior Player</h3>
+          <p class="max-sm:w-5/6 text-center text-para-color-desc">
+            Amet consectetur. Condimentum dignissim adipiscing .
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <div
+            class="radial-progress text-[#4C8DF1]"
+            style="--value: 80"
+            role="progressbar"
+          >
+            80%
+          </div>
+          <h3 class="font-semibold text-[#131318]">Training Ground</h3>
+          <p class="max-sm:w-5/6 text-center text-para-color-desc">
+            Amet consectetur. Condimentum dignissim adipiscing .
+          </p>
+        </div>
+      </section>
+      <!-- Program section  -->
+      <section class="w-3/4 mx-auto flex flex-col gap-6 my-20">
+        <h2
+          class="font-manrope md:text-4xl lg:text-4xl font-extrabold text-center"
+        >
+          Professional Hockeys Club
+        </h2>
+        <p class="text-para-color-desc text-center lg:w-[40%] lg:mx-auto">
+          Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis
+          placerat dolor. Purus urna in sit nullam proin.
+        </p>
+        <div class="h-1"></div>
+      </section>
+      <!-- grid section  -->
+      <section>
+        <div
+          class="lg:grid lg:grid-cols-2 lg:w-[790px] mx-auto lg:gap-y-3 max-sm:flex max-sm:flex-col max-sm:w-[90%] max-sm:gap-4 max-sm:mx-auto"
+        >
+          <div>
+            <div
+              class="max-sm:w-[90%] max-sm:mx-auto card w-96 bg-base-100 shadow-xl image-full"
+            >
+              <figure>
+                <img src="assets/Images/2.png" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title text-white">Junior Program</h2>
+                <p>
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <div class="card-actions justify-start">
+                  <button
+                    class="btn bg-[#FF4240] border-none text-white text-xl"
+                  >
+                    Register Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="max-sm:w-[90%] max-sm:mx-auto card w-96 bg-base-100 shadow-xl image-full"
+            >
+              <figure>
+                <img src="assets/Images/2.png" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title text-white">Junior Program</h2>
+                <p>
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <div class="card-actions justify-start">
+                  <button
+                    class="btn bg-[#FF4240] border-none text-white text-xl"
+                  >
+                    Register Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div
+              class="max-sm:w-[90%] lg:w-[780px] lg:h-[240px] max-sm:mx-auto card w-96 bg-base-100 shadow-xl image-full"
+            >
+              <figure>
+                <img src="assets/Images/4.png" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title text-white">Junior Program</h2>
+                <p>
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <div class="card-actions justify-start">
+                  <button
+                    class="btn bg-[#FF4240] border-none text-white text-xl"
+                  >
+                    Register Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer></footer>
