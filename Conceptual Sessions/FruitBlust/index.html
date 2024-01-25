@@ -15,8 +15,10 @@
   <body>
     <header>
       <!-- Navbar Section  -->
-      <nav class="container mx-auto">
-        <div class="navbar bg-base-100">
+      <nav class="container mx-auto max-sm:w-[90%]">
+        <div
+          class="navbar bg-base-100 bg-[#F85559] my-2 rounded-full py-3 px-5"
+        >
           <div class="navbar-start hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
               <li><a>Home</a></li>
@@ -53,15 +55,20 @@
                 <li><a>All Fruits</a></li>
               </ul>
             </div>
-            <img src="assets/images/logo.png" alt="" />
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <img class="w-7" src="assets/images/logo.png" alt="" />
+            <a class="btn btn-ghost text-xl">FruitBrust</a>
           </div>
           <div class="navbar-end">
-            <input
-              type="text"
-              placeholder="Type here"
-              class="input input-bordered w-full max-w-xs"
-            />
+            <div
+              class="bg-white hidden rounded-[200px] lg:flex justify-around items-center gap-3 px-4"
+            >
+              <input
+                type="text"
+                placeholder="Type here"
+                class="input input-bordered border-none w-full max-w-xs"
+              />
+              <img src="assets/images/search.png" alt="" />
+            </div>
           </div>
         </div>
       </nav>
