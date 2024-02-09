@@ -1,4 +1,5 @@
 function deleteInvalids(array) {
+  // You have to write your code here
   if (!Array.isArray(array)) {
     return "Invalid Array";
   }

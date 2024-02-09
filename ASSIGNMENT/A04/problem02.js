@@ -1,4 +1,5 @@
 function checkName(name) {
+  // You have to write your code here
   if (typeof name !== "string") {
     return "invalid";
   }
