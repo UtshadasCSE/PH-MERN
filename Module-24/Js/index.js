@@ -16,6 +16,9 @@ for (const item of liItem) {
 }
 
 let links = document.getElementsByClassName("links");
+let liCreate = document.createElement("li");
+liCreate.appendChild(document.createTextNode("HI"));
+liCreate.appendChild(liCreate);
 console.log(links);
 for (const item of links) {
   console.log(item);
