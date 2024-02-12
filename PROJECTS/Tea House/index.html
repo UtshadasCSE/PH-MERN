@@ -16,25 +16,361 @@
       src="https://kit.fontawesome.com/c636c59a4d.js"
       crossorigin="anonymous"
     ></script>
+    <!-- font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom tailwind css  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              btnBg: "gradient-to-r from-[#F00] to-[#FF8938]",
+              custom: "0px 7px 50px 0px rgba(0, 0, 0, 0.06)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- css style  -->
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <header class="lg:flex container mx-auto justify-around items-center">
-      <div>
-        <h2>It's good tea time at The Tea House</h2>
-        <p>
+    <header
+      class="lg:flex container mt-11 mb-28 mx-auto justify-center lg:gap-12 items-center"
+    >
+      <div class="lg:w-2/4 flex flex-col justify-center gap-6">
+        <h2
+          class="lg:text-7xl lg:w-[90%] lg:leading-[80px] font-manrope font-extrabold"
+        >
+          It's good <br />tea time at The Tea House
+        </h2>
+        <p class="lg:w-2/3 font-manrope">
           Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your
           Taste Buds.
         </p>
-        <button>
+        <button
+          class="bg-gradient-to-r from-[#F00] to-[#FF8938] w-1/4 p-3 rounded-lg text-white font-manrope"
+        >
           Explore More<i class="fa-solid fa-arrow-up-right-from-square"></i>
         </button>
       </div>
-      <div>
-        <img src="assets/images/banner.png" alt="" />
-        <div></div>
+      <div class="relative">
+        <img class="w-11/12" src="assets/images/banner.png" alt="" />
+        <div
+          class="absolute w-[200px] min-h-16 top-[300px] bg-[#FFF] rounded-xl custom flex flex-col justify-center items-center p-3"
+        >
+          <h2 class="text-3xl font-manrope font-extrabold">5.00</h2>
+          <p class="text-center font-manrope">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <!-- Our Featured Products section  -->
+      <section class="flex flex-col justify-center items-center gap-12 my-12">
+        <h2
+          class="text-center text-[#1C1C1C] font-manrope font-extrabold text-5xl"
+        >
+          Our Featured Products
+        </h2>
+        <p class="font-manrope w-1/2 text-center">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly believable.
+        </p>
+        <div class="grid grid-cols-4 container mx-auto gap-7">
+          <div
+            class="card w-96 bg-gradient-to-b from-transparent to-gray-100 shadow-xl"
+          >
+            <figure>
+              <img
+                class="w-[100px]"
+                src="assets/images/tea-1.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-manrope font-extrabold">Milk Tea</h2>
+              <p class="w-52 mx-auto font-manrope text-[#777]">
+                Creamer could be replaced by fresh milk
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-gradient-to-b from-transparent to-gray-100 shadow-xl"
+          >
+            <figure>
+              <img
+                class="w-[100px]"
+                src="assets/images/tea-2.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-manrope font-extrabold">Black Tea</h2>
+              <p class="w-52 font-manrope mx-auto text-[#777]">
+                Creamer could be replaced by fresh milk
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-gradient-to-b from-transparent to-gray-100 shadow-xl"
+          >
+            <figure>
+              <img
+                class="w-[100px]"
+                src="assets/images/tea-3.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-manrope font-extrabold">Lemon Tea</h2>
+              <p class="w-52 mx-auto font-manrope text-[#777]">
+                Creamer could be replaced by fresh milk
+              </p>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-gradient-to-b from-transparent to-gray-100 shadow-xl"
+          >
+            <figure>
+              <img
+                class="w-[100px]"
+                src="assets/images/tea-4.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-manrope font-extrabold">Green Tea</h2>
+              <p class="w-52 mx-auto font-manrope text-[#777]">
+                Creamer could be replaced by fresh milk
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Great Tea, Freshly Presented section  -->
+      <section>
+        <div class="relative overflow-hidden bg-white">
+          <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+            <div
+              class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8"
+            >
+              <div class="sm:max-w-lg">
+                <h1
+                  class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+                >
+                  Great Tea, Freshly Presented
+                </h1>
+                <p class="mt-4 text-xl text-gray-500">
+                  The meaning of gong cha is chanese is to provide the best tea
+                  to emperor from all possessions . It represents the highest
+                  quality and self expectation. Establishing in 2006, Gong cha
+                  had been deeply appreciated by its custoers because of good
+                  words of mouth and unique customized service orginated from
+                  Taiwan.
+                </p>
+              </div>
+              <div>
+                <div class="mt-10">
+                  <!-- Decorative image grid -->
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+                  >
+                    <div
+                      class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8"
+                    >
+                      <div class="flex items-center space-x-6 lg:space-x-8">
+                        <div
+                          class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
+                        >
+                          <div
+                            class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100"
+                          >
+                            <img
+                              src="assets/images/fresh-1.png"
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/fresh-2.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
+                        >
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/fresh-1.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/fresh-1.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/tea-1.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
+                        >
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/tea-2.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="assets/images/tea-4.png"
+                              alt=""
+                              class="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    class="bg-gradient-to-r from-[#F00] to-[#FF8938] w-1/4 p-3 rounded-lg text-white font-manrope"
+                  >
+                    Explore More<i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="bg-gray-200 px-2 py-10">
+
+          <div id="features" class="mx-auto max-w-6xl">
+            <p class="text-center text-base font-semibold leading-7 text-primary-500">Features</p>
+            <h2 class="text-center font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+              Writing has never been so easy
+            </h2>
+            <ul class="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+        
+                <img src="https://www.svgrepo.com/show/530438/ddos-protection.svg" alt="" class="mx-auto h-10 w-10">
+                <h3 class="my-3 font-display font-medium">Powered by ChatGPT</h3>
+                <p class="mt-1.5 text-sm leading-6 text-secondary-500">
+                  the cutting-edge language model that makes interactions a breeze. With its user-friendly interface,
+                  effortlessly tap into the world of AI-generated text.
+                </p>
+        
+              </li>
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+        
+                <img src="https://www.svgrepo.com/show/530442/port-detection.svg"
+                        alt="" class="mx-auto h-10 w-10">
+                <h3 class="my-3 font-display font-medium">Easy to use</h3>
+                <p class="mt-1.5 text-sm leading-6 text-secondary-500">
+                  Simply input your subject, click the generate button, and the result will appear in seconds just like
+                  magick.
+                </p>
+        
+              </li>
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+                <img src="https://www.svgrepo.com/show/530444/availability.svg" alt="" class="mx-auto h-10 w-10">
+                <h3 class="my-3 font-display font-medium">Custom settings</h3>
+                <p class="mt-1.5 text-sm leading-6 text-secondary-500">
+                  We offer advanced customization. You can freely combine options like roles, languages, publish, tones,
+                  lengths,
+                  and formats.
+                </p>
+        
+              </li>
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+                <a href="/pricing" class="group">
+                  <img src="https://www.svgrepo.com/show/530440/machine-vision.svg" alt="" class="mx-auto h-10 w-10">
+                  <h3 class="my-3 font-display font-medium group-hover:text-primary-500">Free trial</h3>
+                  <p class="mt-1.5 text-sm leading-6 text-secondary-500">We offer a free trial service without login. We
+                    provide
+                    many payment options including pay-as-you-go and subscription.</p>
+                </a>
+              </li>
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+                <a href="/templates" class="group">
+                  <img src="https://www.svgrepo.com/show/530450/page-analysis.svg" alt="" class="mx-auto h-10 w-10">
+                  <h3 class="my-3 font-display font-medium group-hover:text-primary-500">
+                    90+ templates
+                  </h3>
+                  <p class="mt-1.5 text-sm leading-6 text-secondary-500">We offer many templates covering areas such as
+                    writing,
+                    education, lifestyle and creativity to inspire your potential. </p>
+                </a>
+              </li>
+              <li class="rounded-xl bg-white px-6 py-8 shadow-sm">
+                <a href="/download" class="group">
+                  <img src="https://www.svgrepo.com/show/530453/mail-reception.svg" alt="" class="mx-auto h-10 w-10">
+                  <h3 class="my-3 font-display font-medium group-hover:text-primary-500">Use Anywhere</h3>
+                  <p class="mt-1.5 text-sm leading-6 text-secondary-500">Our product is compatible with multiple platforms
+                    including Web, Chrome, Windows and Mac, you can use MagickPen anywhere.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+          <div>
+      </section>
+    </main>
+    <footer class="footer p-10 bg-base-300 text-base-content">
+      <nav>
+        <h6 class="footer-title">Services</h6> 
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav> 
+      <nav>
+        <h6 class="footer-title">Company</h6> 
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav> 
+      <nav>
+        <h6 class="footer-title">Social</h6> 
+        <div class="grid grid-flow-col gap-4">
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
