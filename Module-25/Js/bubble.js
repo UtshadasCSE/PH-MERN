@@ -8,7 +8,7 @@ for (const item of items) {
 addBtn.addEventListener("click", function () {
   let container = document.getElementById("ul-parent");
   let li = document.createElement("li");
-  li.classList.add("item");
+  li.classLgiist.add("item");
   li.innerText = "IND Added";
   container.appendChild(li);
 });
