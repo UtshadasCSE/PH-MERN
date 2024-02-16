@@ -27,6 +27,94 @@
             <div class="card-body">
               <h2 class="card-title">Triangle</h2>
               <p>Area (A) =0.5 x b x h</p>
+              <div class="lg:flex">
+                <div
+                  class="lg:flex lg:justify-center lg:items-center gap-5 rounded-sm"
+                >
+                  <input
+                    id="triangle-base"
+                    type="text"
+                    class="bg-slate-200 lg:w-20 px-1"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+                </div>
+                <div class="lg:flex lg:justify-center lg:items-center lg:gap-5">
+                  <input
+                    id="triangle-height"
+                    type="text"
+                    class="bg-slate-200 lg:w-20 lg:ml-5 rounded-sm px-1"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+              <div class="card-actions justify-start">
+                <button
+                  class="btn btn-primary"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Reactangle card section  -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle</h2>
+              <p>Area (A) = w x I</p>
+              <div class="lg:flex">
+                <div>
+                  <input
+                    class="bg-slate-200 lg:w-28 rounded-sm px-2"
+                    type="text"
+                    id="reactW"
+                    placeholder="w"
+                  />cm
+                </div>
+                <div>
+                  <input
+                    class="bg-slate-200 lg:w-28 rounded-sm px-2"
+                    type="text"
+                    id="reactL"
+                    placeholder="l"
+                  />cm
+                </div>
+              </div>
+              <div class="card-actions justify-start">
+                <button class="btn btn-primary" onclick="calculateReactangle()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Parallelogram card section  -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Parallelogram</h2>
+              <p>Area (A) = b x h</p>
+
+              <div class="card-actions justify-start">
+                <button class="btn btn-primary">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!--Rhombus card section  -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/rhombus.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Rhombus</h2>
+              <p>Area (A) =0.5 x d1 x d2</p>
               <div class="card-actions justify-start">
                 <button class="btn btn-primary">Calculate</button>
               </div>
@@ -35,24 +123,11 @@
           <!--Triangle card section  -->
           <div class="card bg-base-100 shadow-xl">
             <figure>
-              <img src="images/rectangle.png" alt="Shoes" />
+              <img src="images/rhombus.png" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Rectangle</h2>
-              <p>Area (A) = w x I</p>
-              <div class="card-actions justify-start">
-                <button class="btn btn-primary">Calculate</button>
-              </div>
-            </div>
-          </div>
-          <!--Reactangle card section  -->
-          <div class="card bg-base-100 shadow-xl">
-            <figure>
-              <img src="images/parallelogram.png" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Parallelogram</h2>
-              <p>Area (A) = b x h</p>
+              <h2 class="card-title">Rhombus</h2>
+              <p>Area (A) =0.5 x d1 x d2</p>
               <div class="card-actions justify-start">
                 <button class="btn btn-primary">Calculate</button>
               </div>
@@ -72,11 +147,16 @@
             </div>
           </div>
         </div>
+
         <!-- area calculation container  -->
         <div class="w-96 border-2 border-gray-700 rounded-md text-center p-4">
           <h2 class="text-xl font-semibold">Area Calculation</h2>
+          <div>
+            <p><span id="tDisplay"></span></p>
+          </div>
         </div>
       </div>
     </main>
+    <script src="Js/script.js"></script>
   </body>
 </html>
