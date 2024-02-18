@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Lagbe - Bangladesh largest traveling booking website</title>
+    <!-- External CSS link  -->
+    <link rel="stylesheet" href="Styles/style.css" />
+    <!-- Tailwind and Daisy UI CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              paraColor: "rgba(3, 7, 18, 0.70)",
+              heroBtn: "rgba(29, 209, 0, 0.40)",
+              heroBtnBg: "rgba(29, 209, 0, 0.10)",
+              couponHeading: "rgba(3, 7, 18, 0.80)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <!-- navbar section  -->
+      <nav class="container mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-railway text-paraColor font-medium"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a
+              class="btn btn-ghost font-railway text-xl lg:text-4xl font-extrabold"
+              >Ticket-Lagbe</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul
+              class="menu menu-horizontal px-1 font-railway text-paraColor font-medium text-lg"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn border-heroBtn text-[#1DD100] font-railway font-bold bg-heroBtnBg"
+            >
+              Bus
+              <img src="images/bus-icon.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- hero section  -->
+      <section
+        class="container max-sm:w-[90%] mx-auto bg-[url('images/banner.png')] lg:h-[550px] h-[100%] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center gap-7 py-7 my-12 rounded-[32px] relative"
+      >
+        <h1
+          class="text-white max-sm:text-2xl lg:text-6xl font-railway font-extrabold"
+        >
+          End-to-End Travel with
+        </h1>
+        <h1
+          class="text-[#1DD100] font-railway font-extrabold max-sm:text-2xl lg:text-6xl"
+        >
+          T Paribahan
+        </h1>
+        <p
+          class="text-[#FFF] max-sm:text-sm text-lg font-inter font-normal max-sm:w-3/4 lg:w-2/4 text-center"
+        >
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <button
+          class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1DD100] font-railway font-bold max-sm:px-4"
+        >
+          Buy Tickets
+        </button>
+        <!-- positions propertise section  -->
+        <div class="flex flex-col gap-4 max-sm:absolute max-sm:top-[380px]">
+          <div
+            class="lg:absolute left-[160px] flex justify-center items-center rounded-3xl border-b-[3px] border-b-[#1DD100] bg-[#FFF] px-5 py-3"
+          >
+            <div>
+              <img src="images/people.png" alt="" />
+            </div>
+            <div>
+              <h2 class="font-inter font-bold max-sm:text-xl lg:text-4xl p-3">
+                500K+
+              </h2>
+              <p class="font-inter font-normal text-lg text-[#03071299]">
+                Registered users
+              </p>
+            </div>
+          </div>
+          <div
+            class="lg:absolute lg:right-[490px] flex justify-center items-center rounded-3xl border-b-[3px] border-b-[#1DD100] bg-[#FFF] px-5 py-3"
+          >
+            <div>
+              <img src="images/ticket-cupon.png" alt="" />
+            </div>
+            <div>
+              <h2 class="font-inter font-bold max-sm:text-xl lg:text-4xl p-3">
+                1.7 lacks
+              </h2>
+              <p class="font-inter font-normal text-lg text-[#03071299]">
+                Tickets sold
+              </p>
+            </div>
+          </div>
+          <div
+            class="lg:absolute lg:left-[890px] flex justify-center items-center rounded-3xl border-b-[3px] border-b-[#1DD100] bg-[#FFF] px-5 py-3"
+          >
+            <div>
+              <img src="images/stoppage.png" alt="" />
+            </div>
+            <div>
+              <h2 class="font-inter font-bold max-sm:text-xl lg:text-4xl p-3">
+                80K+
+              </h2>
+              <p class="font-inter font-normal text-lg text-[#03071299]">
+                Rental partners
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Best offers for you section  -->
+      <section class="max-sm:my-[490px] my-28 w-4/5 mx-auto">
+        <h2
+          class="font-railway font-bold text-4xl text-[#030712] text-center max-sm:text-xl"
+        >
+          Best offers for you
+        </h2>
+        <!-- coupon card  -->
+        <div class="lg:flex lg:gap-8">
+          <!-- coupon card one  -->
+          <div
+            class="flex bg-[#FFBF0F] lg:w-2/4 rounded-3xl my-11 justify-around items-center"
+          >
+            <div>
+              <h3
+                class="text-couponHeading text-center font-inter font-extrabold lg:text-4xl max-sm:text-xl"
+              >
+                15% OFF
+              </h3>
+              <h5
+                class="text-couponHeading font-inter text-center max-sm:text-sm font-extrabold"
+              >
+                on your next purchase
+              </h5>
+              <p class="text-[#03071280] text-center">use by January 2024</p>
+            </div>
+            <div>
+              <img src="images/cupon-devider.png" alt="" />
+            </div>
+            <div>
+              <h3
+                class="text-couponHeading text-center font-inter font-extrabold lg:text-4xl max-sm:text-xl"
+              >
+                NEW15
+              </h3>
+              <p class="text-[#03071280] text-center">Coupon Code</p>
+            </div>
+          </div>
+          <!-- coupon card two  -->
+          <div
+            class="flex bg-[#F78C9C] lg:w-2/4 rounded-3xl my-11 justify-around items-center"
+          >
+            <div>
+              <h3
+                class="text-couponHeading text-center font-inter font-extrabold lg:text-4xl max-sm:text-xl"
+              >
+                20% OFF
+              </h3>
+              <h5
+                class="text-couponHeading font-inter text-center max-sm:text-sm font-extrabold"
+              >
+                on your next purchase
+              </h5>
+              <p class="text-[#03071280] text-center">use by January 2024</p>
+            </div>
+            <div>
+              <img src="images/cupon-devider.png" alt="" />
+            </div>
+            <div>
+              <h3
+                class="text-couponHeading text-center font-inter font-extrabold lg:text-4xl max-sm:text-xl"
+              >
+                Couple 20
+              </h3>
+              <p class="text-[#03071280] text-center">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-sm:w-4/12 max-sm:mx-auto lg:flex lg:justify-center lg:py-28"
+        >
+          <button
+            class="btn btn-outline btn-success text-[#1DD100] text-center"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- connect with JS file  -->
+    <script src="Js/script.js"></script>
+  </body>
+</html>
