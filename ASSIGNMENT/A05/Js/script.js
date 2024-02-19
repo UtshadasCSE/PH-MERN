@@ -10,6 +10,7 @@ document
           document
             .getElementById("couponBtnEnable")
             .removeAttribute("disabled");
+          document.getElementById("couponName").removeAttribute("disabled");
         }
         document.getElementById("seatCounter").innerText = count;
         clickedButton.push(e.target.id);
@@ -60,8 +61,7 @@ function getDiscount() {
     newElement.classList.remove("hidden");
     document.getElementById("discountPrice").innerText = discount;
     document.getElementById("couponBtn").classList.add("hidden");
-  }
-  if (couponType.value == "Couple20") {
+  } else if (couponType.value == "Couple20") {
     let grandPrice = document.getElementById("grandTotal");
     discount = parseFloat(totalUpdatePrice) * 0.2;
     grandTotal = parseFloat(totalUpdatePrice) - discount;
@@ -70,6 +70,8 @@ function getDiscount() {
     newElement.classList.remove("hidden");
     document.getElementById("discountPrice").innerText = discount;
     document.getElementById("couponBtn").classList.add("hidden");
+  } else {
+    alert("Wrong Coupon! Please Enter a valid coupon!");
   }
 }
 document.getElementById("phNumber").addEventListener("keyup", function (e) {
