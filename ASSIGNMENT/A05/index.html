@@ -109,6 +109,9 @@
         </p>
         <button
           class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1DD100] font-railway font-bold max-sm:px-4"
+          onclick="document.getElementById('buyTicket').scrollIntoView({
+            behavior: 'smooth'
+        })"
         >
           Buy Tickets
         </button>
@@ -408,7 +411,7 @@
         <!-- ....  -->
       </section>
       <!-- Seat plan section  -->
-      <section id=" ">
+      <section id="buyTicket">
         <div
           class="bg-white w-[1172px] mx-auto rounded-3xl p-8 flex gap-8 max-sm:flex max-sm:flex-col"
         >
@@ -637,7 +640,7 @@
                       <th>
                         Seat<span
                           id="seatCounter"
-                          class="ml-1 bg-gariPrimary rounded-2xl text-xs px-2 text-white"
+                          class="ml-1 bg-gariPrimary rounded-2xl text-xs px-2 text-[#1DD100]"
                           >0</span
                         >
                       </th>
