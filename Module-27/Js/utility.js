@@ -35,8 +35,8 @@ function remdBgColor(id) {
 }
 
 function handleKeyboardButton(event) {
-  let audio = new Audio("ss.mp3");
-  audio.play();
+  // let audio = new Audio("ss.mp3");
+  // audio.play();
   let playerPressed = event.key;
   let displayAlphabet = document.getElementById("screenTV");
   let currentAlphabet = displayAlphabet.innerText;
