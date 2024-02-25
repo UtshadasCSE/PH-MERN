@@ -43,11 +43,30 @@ function handleKeyboardButton(event) {
   let expectedAlphabet = currentAlphabet.toLowerCase();
   console.log(expectedAlphabet, playerPressed);
   if (expectedAlphabet == playerPressed) {
-    console.log("You got points");
+    // display the score
+    const currentScore = document.getElementById("current-score");
+    const currentScoreText = currentScore.innerText;
+    const cScore = parseInt(currentScoreText);
+    const newScore = cScore + 1;
+    currentScore.innerText = newScore;
+    console.log(currentScoreText);
+
+    // start a new round
     remdBgColor(expectedAlphabet);
     continueGame();
   } else {
-    console.log("You Lose");
+    // work with life
+    const currentLife = document.getElementById("current-life");
+    const currentLifeText = currentLife.innerText;
+    const cLife = parseInt(currentLifeText);
+    const life = cLife - 1;
+    currentLife.innerText = life;
+    if (life === 0) {
+      console.log("Game Over");
+      hideElement("playground");
+      showElement("score");
+    }
+    // console.log("You Lose");
   }
 }
 
