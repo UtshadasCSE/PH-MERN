@@ -64,8 +64,12 @@ function handleKeyboardButton(event) {
     if (life === 0) {
       console.log("Game Over");
       hideElement("playground");
+
       showElement("score");
     }
+
+    const lastScore = document.getElementById("lastScore");
+    lastScore.innerText = newScore;
     // console.log("You Lose");
   }
 }
