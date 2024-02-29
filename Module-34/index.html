@@ -91,12 +91,14 @@
 
         <div class="flex w-4/5 mx-auto rounded bg-searchBar my-8">
           <input
+            id="search-input"
             class="w-full border-none bg-transparent px-4 py-1 text-gray-400 outline-none focus:outline-none"
             type="search"
             name="search"
             placeholder="Search..."
           />
           <button
+            onclick="handleSearch()"
             type="submit"
             class="m-2 rounded bg-blue-600 px-4 py-2 text-white"
           >
