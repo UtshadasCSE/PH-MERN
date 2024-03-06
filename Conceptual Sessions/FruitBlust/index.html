@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FruitBrust</title>
+    <!-- CSS custom css link  -->
+    <link rel="stylesheet" href="Styles/style.css" />
     <!-- Tailwinf and Daisy UI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
@@ -20,7 +22,9 @@
           class="navbar bg-base-100 bg-[#F85559] my-2 rounded-full py-3 px-5"
         >
           <div class="navbar-start hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
+            <ul
+              class="menu menu-horizontal px-1 font-lato text-white font-medium"
+            >
               <li><a>Home</a></li>
               <li><a>About Us</a></li>
               <li><a>Shop</a></li>
@@ -47,7 +51,7 @@
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-lato"
               >
                 <li><a>Home</a></li>
                 <li><a>About Us</a></li>
@@ -56,7 +60,7 @@
               </ul>
             </div>
             <img class="w-7" src="assets/images/logo.png" alt="" />
-            <a class="btn btn-ghost text-xl">FruitBrust</a>
+            <a class="btn btn-ghost text-xl font-lato text-white">FruitBrust</a>
           </div>
           <div class="navbar-end">
             <div
@@ -64,14 +68,64 @@
             >
               <input
                 type="text"
-                placeholder="Type here"
-                class="input input-bordered border-none w-full max-w-xs"
+                placeholder="Type here "
+                class="input input-bordered border-none w-full max-w-xs outline-none"
               />
               <img src="assets/images/search.png" alt="" />
             </div>
           </div>
         </div>
       </nav>
+      <!-- Carosual  -->
+      <div class="container mx-auto my-8 max-sm:w-4/5 relative">
+        <div class="carousel w-full">
+          <div>hello</div>
+          <div
+            id="slide1"
+            class="carousel-item relative w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./assets/images/banner1.png)] lg:h-[60vh] max-sm:h-[40vh] bg-no-repeat bg-center bg-cover rounded-lg"
+          >
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div
+            id="slide2"
+            class="carousel-item relative w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./assets/images/banner2.png)] lg:h-[60vh] bg-no-repeat bg-center bg-cover rounded-lg"
+          >
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div
+            id="slide3"
+            class="carousel-item relative w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./assets/images/banner3.png)] lg:h-[60vh] bg-no-repeat bg-center bg-cover rounded-lg"
+          >
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div
+            id="slide4"
+            class="carousel-item relative w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./assets/images/banner4.png)] lg:h-[60vh] bg-no-repeat bg-center bg-cover rounded-lg"
+          >
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main></main>
     <footer></footer>
