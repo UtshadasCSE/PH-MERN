@@ -6,6 +6,12 @@ const products = [
   { name: "redmi x9", brand: "xiaomi", price: 30000 },
   { name: "infinix 10", brand: "itel", price: 10000 },
 ];
+// how to add new product but ok previous one
+const newProduct = { name: "alpha", brand: "tesla", price: 500000 };
+const addDoneProduct = [...products, newProduct];
+console.log(addDoneProduct);
+const remNewProduct = addDoneProduct.filter((check) => check.name !== "alpha");
+console.log(remNewProduct);
 // how to find something for array of objects
 const brands = products.map((products) => products.brand);
 console.log(brands);
