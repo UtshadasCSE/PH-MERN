@@ -1,5 +1,7 @@
-let addToCart = document.getElementsByClassName("addTo");
+let addToCart = document.getElementsByClassName("btn");
 
 for (const btn of addToCart) {
-  console.log(btn);
+  btn.addEventListener("click", function () {
+    console.log("Ok");
+  });
 }
