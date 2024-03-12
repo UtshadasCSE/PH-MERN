@@ -1,4 +1,3 @@
-import Watch from "./../Watch/Watch";
 const Sunglass = () => {
   return (
     <div>
