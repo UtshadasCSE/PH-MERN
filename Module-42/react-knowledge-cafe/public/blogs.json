@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "image": "https://www.digitell.com.au/wp-content/uploads/2019/01/portfolio-images-ae.jpg",
+      "publish_date": "2024-03-12",
+      "reading_time_minutes": 10,
+      "hashtags": ["technology", "programming", "webdevelopment"],
+      "author": {
+        "name": "John Doe",
+        "image": "https://pyxis.nymag.com/v1/imgs/d7c/80b/a7e257ac9a2a024d8db0ebc5730bb5a222-30-roald-dahl.rsquare.w330.jpg"
+      },
+      "title": "10 Tips for Better Coding"
+    },
+    {
+      "id": 2,
+      "image": "https://example.com/image2.jpg",
+      "publish_date": "2024-03-11",
+      "reading_time_minutes": 8,
+      "hashtags": ["science", "research", "innovation"],
+      "author": {
+        "name": "Alice Johnson",
+        "image": "https://example.com/author2.jpg"
+      },
+      "title": "The Future of Science: Exploring New Frontiers"
+    },
+    {
+      "id": 3,
+      "image": "https://example.com/image3.jpg",
+      "publish_date": "2024-03-10",
+      "reading_time_minutes": 12,
+      "hashtags": ["health", "fitness", "nutrition"],
+      "author": {
+        "name": "Bob Smith",
+        "image": "https://example.com/author3.jpg"
+      },
+      "title": "The Ultimate Guide to Healthy Living"
+    },
+    {
+      "id": 4,
+      "image": "https://example.com/image4.jpg",
+      "publish_date": "2024-03-09",
+      "reading_time_minutes": 15,
+      "hashtags": ["travel", "adventure", "explore"],
+      "author": {
+        "name": "Emily White",
+        "image": "https://example.com/author4.jpg"
+      },
+      "title": "Exploring the World: A Traveler's Journey"
+    },
+    {
+      "id": 5,
+      "image": "https://example.com/image5.jpg",
+      "publish_date": "2024-03-08",
+      "reading_time_minutes": 7,
+      "hashtags": ["art", "design", "creativity"],
+      "author": {
+        "name": "David Brown",
+        "image": "https://example.com/author5.jpg"
+      },
+      "title": "Unleashing Creativity: The Art of Design"
+    }
+  ]
+  
