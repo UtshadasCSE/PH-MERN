@@ -12,9 +12,11 @@ function App() {
       {/* <Navbar /> */}
       <Nav />
       <PriceOptions />
-      <Linechart />
-      <Pichart />
-      <Phones />
+      <div className="flex flex-col justify-center items-center gap-4">
+        <Linechart />
+        <Pichart />
+        <Phones />
+      </div>
     </>
   );
 }
