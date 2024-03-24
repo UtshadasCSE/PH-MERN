@@ -3,21 +3,26 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-[#1A1919] text-white">
         <aside>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center gap-2">
             <img
               src="../../../public/assets/logo/chlogo.png"
-              className="w-36"
+              className="w-20"
               alt=""
             />
             <h2 className="text-4xl">CareerHub</h2>
           </div>
 
-          <p className="w-2/3 font-bold ">
+          <p className="w-2/3 max-sm:w-11/12 font-bold ">
             <br />
+            <div className="divider divider-primary w-3/4 max-sm:w-9/12"></div>
             <p className="text-[#FFFFFFB2]">
-              There are many variations of passages of Lorem Ipsum , but the
-              majority have suffered alteration in some form.
+              Promote networking events, job fairs, and industry conferences
+              where users can connect with employers, recruiters, and
+              professionals in their field.
             </p>
+            <div className="pt-5">
+              <img src="../../../public/assets/icons/social.png" alt="" />
+            </div>
           </p>
         </aside>
         <nav>
