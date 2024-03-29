@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../Utility/localStorage";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { Helmet } from "react-helmet-async";
 
 const Appliedjobs = () => {
   const jobs = useLoaderData();
@@ -38,6 +39,9 @@ const Appliedjobs = () => {
   return (
     <>
       <div>
+        <Helmet>
+          <title>Career Hub | Applied Jobs </title>
+        </Helmet>
         <div className="bg-[#7E90FE0D] relative py-40">
           <h2 className="text-3xl font-bold text-[#1A1919] text-center ">
             Applied Jobs

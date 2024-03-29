@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 // import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
@@ -9,6 +10,7 @@ import Appliedjobs from "./components/Appliedjobs/Appliedjobs";
 import Errorpage from "./components/Errorpage/Errorpage";
 import Jobdetails from "./components/Jobdetails/Jobdetails";
 import Blogs from "./components/Blogs/Blogs";
+import Statistics from "./components/Statistics/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics />,
       },
       {
         path: "/applied",
@@ -33,12 +39,15 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+        loader: () => fetch("blogs.json"),
       },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>
 );

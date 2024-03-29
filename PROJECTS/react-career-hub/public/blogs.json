@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "The Importance of Networking in Your Career",
-      "image": "https://example.com/images/networking.jpg",
+      "image": "./assets/images/job1.jpg",
       "description": "Learn why networking is essential for career growth and how to effectively network in your industry.",
       "date": "2023-05-10",
       "published_date": "2023-05-12"
@@ -10,7 +10,7 @@
     {
       "id": 2,
       "title": "Top 10 Tips for Crafting a Standout Resume",
-      "image": "https://example.com/images/resume.jpg",
+      "image": "./assets/images/job2.jpg",
       "description": "Discover expert advice on how to create a resume that grabs recruiters' attention and lands you interviews.",
       "date": "2023-06-15",
       "published_date": "2023-06-18"
@@ -18,7 +18,7 @@
     {
       "id": 3,
       "title": "Mastering the Art of Job Interviews",
-      "image": "https://example.com/images/interview.jpg",
+      "image": "./assets/images/job3.jpg",
       "description": "Gain confidence and ace your job interviews with these proven strategies and techniques.",
       "date": "2023-07-20",
       "published_date": "2023-07-22"
@@ -26,7 +26,7 @@
     {
       "id": 4,
       "title": "The Future of Remote Work: Trends and Predictions",
-      "image": "https://example.com/images/remote-work.jpg",
+      "image": "./assets/images/job4.jpg",
       "description": "Explore the latest trends in remote work and how they are reshaping the future of the workforce.",
       "date": "2023-08-10",
       "published_date": "2023-08-12"
@@ -34,7 +34,7 @@
     {
       "id": 5,
       "title": "Effective Time Management Strategies for Professionals",
-      "image": "https://example.com/images/time-management.jpg",
+      "image": "./assets/images/job5.jpg",
       "description": "Learn how to prioritize tasks, set goals, and maximize productivity with these time management tips.",
       "date": "2023-09-05",
       "published_date": "2023-09-07"
@@ -42,7 +42,7 @@
     {
       "id": 6,
       "title": "Navigating Career Transitions: Challenges and Opportunities",
-      "image": "https://example.com/images/career-transitions.jpg",
+      "image": "./assets/images/job6.jpg",
       "description": "Discover how to successfully navigate career transitions and leverage new opportunities for growth.",
       "date": "2023-10-15",
       "published_date": "2023-10-17"
@@ -50,7 +50,7 @@
     {
       "id": 7,
       "title": "The Power of Mentorship in Professional Development",
-      "image": "https://example.com/images/mentorship.jpg",
+      "image": "./assets/images/job7.jpg",
       "description": "Find out how mentorship can accelerate your career advancement and personal growth.",
       "date": "2023-11-20",
       "published_date": "2023-11-22"
@@ -58,7 +58,7 @@
     {
       "id": 8,
       "title": "Building a Personal Brand: Tips for Career Success",
-      "image": "https://example.com/images/personal-brand.jpg",
+      "image": "./assets/images/job8.jpg",
       "description": "Learn how to build a strong personal brand that sets you apart in your industry and attracts opportunities.",
       "date": "2023-12-10",
       "published_date": "2023-12-12"
@@ -66,7 +66,7 @@
     {
       "id": 9,
       "title": "Staying Resilient in Times of Change: Strategies for Professionals",
-      "image": "https://example.com/images/resilience.jpg",
+      "image": "./assets/images/job9.jpg",
       "description": "Discover resilience-building techniques to overcome challenges and thrive in your career.",
       "date": "2024-01-05",
       "published_date": "2024-01-07"
@@ -74,7 +74,7 @@
     {
       "id": 10,
       "title": "The Rise of Gig Economy: Opportunities and Challenges",
-      "image": "https://example.com/images/gig-economy.jpg",
+      "image": "./assets/images/job10.jpg",
       "description": "Explore the gig economy phenomenon and its impact on traditional employment models.",
       "date": "2024-02-15",
       "published_date": "2024-02-17"
@@ -82,7 +82,7 @@
     {
       "id": 11,
       "title": "Navigating Workplace Conflicts: Strategies for Effective Resolution",
-      "image": "https://example.com/images/workplace-conflicts.jpg",
+      "image": "./assets/images/job11.jpg",
       "description": "Learn how to address and resolve workplace conflicts constructively to maintain a positive work environment.",
       "date": "2024-03-10",
       "published_date": "2024-03-12"
@@ -90,7 +90,7 @@
     {
       "id": 12,
       "title": "The Importance of Continuous Learning in Career Growth",
-      "image": "https://example.com/images/continuous-learning.jpg",
+      "image": "./assets/images/job12.jpg",
       "description": "Discover the benefits of lifelong learning and how it can propel your career to new heights.",
       "date": "2024-02-10",
       "publishedDate": "2024-02-10"
@@ -99,7 +99,7 @@
     {
       "id": 13,
       "title": "Strategies for Effective Resolution",
-      "image": "https://example.com/images/workplace-conflicts.jpg",
+      "image": "./assets/images/job13.jpg",
       "description": "Learn how to address and resolve workplace conflicts constructively to maintain a positive work environment.",
       "date": "2024-03-10",
       "published_date": "2024-03-12"
@@ -108,7 +108,7 @@
   {
     "id": 14,
     "title": "The Importance of Time Management",
-    "image": "https://example.com/time-management.jpg",
+    "image": "./assets/images/job14.jpg",
     "description": "Learn why time management is crucial for productivity and success in both personal and professional life.",
     "date": "2024-03-15",
     "publishedDate": "2024-03-16"
@@ -116,7 +116,7 @@
   {
     "id": 15,
     "title": "10 Tips for Effective Remote Work",
-    "image": "https://example.com/remote-work-tips.jpg",
+    "image": "./assets/images/job15.jpg",
     "description": "Discover practical tips for staying productive and maintaining work-life balance while working remotely.",
     "date": "2024-03-10",
     "publishedDate": "2024-03-12"
