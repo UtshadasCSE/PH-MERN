@@ -57,7 +57,12 @@ const Header = () => {
               </li>
             </ul>
             <div className="items-center flex-shrink-0 hidden lg:flex">
-              <button className="self-center px-8 py-3 rounded">Sign in</button>
+              <Link to="/sign">
+                {" "}
+                <button className="self-center px-8 py-3 rounded">
+                  Sign in
+                </button>
+              </Link>
               <button className="self-center px-8 py-3 font-semibold rounded dark:bg-indigo-600 dark:text-gray-50">
                 Sign up
               </button>

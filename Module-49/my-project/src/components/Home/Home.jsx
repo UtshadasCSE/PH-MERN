@@ -28,6 +28,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Features product  */}
+      <div></div>
     </div>
   );
 };
