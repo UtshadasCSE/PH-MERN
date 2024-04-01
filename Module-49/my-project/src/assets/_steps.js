@@ -8,4 +8,5 @@
 9.Now const auth = getAuth(app) Import getAuth from firebase 
 10.import googleAuthProvider and get provider
 11.signInwithPop here you pass auth and provider
+12.Activate signIn method
 */

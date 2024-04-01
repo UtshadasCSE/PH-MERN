@@ -1,0 +1,108 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Blue Denim Jacket",
+      "price": 49.99,
+      "brand": "Levi's",
+      "availability": true
+    },
+    {
+      "id": 2,
+      "name": "Vintage Distressed Denim Jacket",
+      "price": 69.99,
+      "brand": "Wrangler",
+      "availability": false
+    },
+    {
+      "id": 3,
+      "name": "Black Washed Denim Jacket",
+      "price": 59.99,
+      "brand": "Calvin Klein",
+      "availability": true
+    },
+    {
+      "id": 4,
+      "name": "Light Blue Oversized Denim Jacket",
+      "price": 79.99,
+      "brand": "Tommy Hilfiger",
+      "availability": true
+    },
+    {
+      "id": 5,
+      "name": "Ripped Distressed Denim Jacket",
+      "price": 89.99,
+      "brand": "GAP",
+      "availability": true
+    },
+    {
+      "id": 6,
+      "name": "Dark Wash Trucker Denim Jacket",
+      "price": 54.99,
+      "brand": "Abercrombie & Fitch",
+      "availability": false
+    },
+    {
+      "id": 7,
+      "name": "Sherpa-Lined Denim Jacket",
+      "price": 99.99,
+      "brand": "American Eagle",
+      "availability": true
+    },
+    {
+      "id": 8,
+      "name": "Faded Black Denim Jacket",
+      "price": 64.99,
+      "brand": "Hollister",
+      "availability": true
+    },
+    {
+      "id": 9,
+      "name": "Distressed Cropped Denim Jacket",
+      "price": 74.99,
+      "brand": "Guess",
+      "availability": false
+    },
+    {
+      "id": 10,
+      "name": "Indigo Dyed Denim Jacket",
+      "price": 79.99,
+      "brand": "Diesel",
+      "availability": true
+    },
+    {
+      "id": 11,
+      "name": "Acid Wash Overshirt Denim Jacket",
+      "price": 89.99,
+      "brand": "Ralph Lauren",
+      "availability": true
+    },
+    {
+      "id": 12,
+      "name": "Raw Hem Cropped Denim Jacket",
+      "price": 69.99,
+      "brand": "Zara",
+      "availability": false
+    },
+    {
+      "id": 13,
+      "name": "Stonewash Western Denim Jacket",
+      "price": 94.99,
+      "brand": "Lucky Brand",
+      "availability": true
+    },
+    {
+      "id": 14,
+      "name": "Patchwork Embroidered Denim Jacket",
+      "price": 109.99,
+      "brand": "Free People",
+      "availability": true
+    },
+    {
+      "id": 15,
+      "name": "Sherpa Collar Denim Bomber Jacket",
+      "price": 119.99,
+      "brand": "Urban Outfitters",
+      "availability": false
+    }
+  ]
+  

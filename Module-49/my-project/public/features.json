@@ -1,0 +1,45 @@
+[
+    {
+      "productId": 1,
+      "name": "Classic Blue Denim Jacket",
+      "discountPrice": 49.99,
+      "image": "./images/fp04.png",
+      "imported": true
+    },
+    {
+      "productId": 2,
+      "name": "Vintage Distressed Denim Jacket",
+      "discountPrice": 69.99,
+      "image": "./images/fp02.jpeg",
+      "imported": true
+    },
+    {
+      "productId": 3,
+      "name": "Black Washed Denim Jacket",
+      "discountPrice": 59.99,
+      "image": "./images/fp03.jpeg",
+      "imported": false
+    },
+    {
+      "productId": 4,
+      "name": "Light Blue Oversized Denim Jacket",
+      "discountPrice": 79.99,
+      "image": "./images/fp04.png",
+      "imported": false
+    },
+    {
+      "productId": 5,
+      "name": "Ripped Distressed Denim Jacket",
+      "discountPrice": 89.99,
+      "image": "./images/fp05.jpeg",
+      "imported": true
+    },
+    {
+      "productId": 6,
+      "name": "Dark Wash Trucker Denim Jacket",
+      "discountPrice": 54.99,
+      "image": "./images/fp06.jpeg",
+      "imported": false
+    }
+  ]
+  
