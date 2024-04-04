@@ -30,7 +30,7 @@ const Header = () => {
                 href="#"
                 className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
               >
-                <Link to="/about">About</Link>
+                <Link to="/login">About</Link>
               </a>
             </li>
           </ul>

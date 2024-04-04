@@ -1,9 +1,15 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  updateProfile,
+} from "firebase/auth";
 import app from "../../Utility/firebase";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Signin = () => {
   const [signinError, setSigninError] = useState("");
@@ -15,6 +21,7 @@ const Signin = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
     setSigninError("");
+    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const terms = e.target.terms.checked;
@@ -28,11 +35,28 @@ const Signin = () => {
       setSigninError("Bsdk terms and condition select quickly");
       return;
     }
-    // here apply firebase code
+    // here create user
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
+        // upadate profile
+        updateProfile(userCredential.user, {
+          displayName: name,
+          photoURL: "https://example.com/jane-q-user/profile.jpg",
+        })
+          .then(() => {
+            // Profile updated!
+            // ...
+          })
+          .catch(() => {
+            // An error occurred
+            // ...
+          });
+        // user verification
+        sendEmailVerification(auth.currentUser).then(() => {
+          alert("Please check your email ");
+        });
         console.log(user);
         handleToastFy();
       })
@@ -44,12 +68,15 @@ const Signin = () => {
   return (
     <div className="flex flex-col h-screen">
       <ToastContainer />
-      <h2 className="text-3xl font-bold text-center">Sign In </h2>
+      <h2 className="text-3xl font-bold text-center">Sign Up </h2>
       <form
         onSubmit={handleSignIn}
         action=""
         className="flex flex-col justify-center items-center gap-4 h-5/6 "
       >
+        <label className="input input-bordered flex items-center gap-2">
+          <input type="text" className="grow" name="name" placeholder="Name" />
+        </label>
         <label className="input input-bordered flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +120,14 @@ const Signin = () => {
         <div className="flex  items-center  gap-3">
           <input type="checkbox" name="terms" />
           <label htmlFor="">Accept our terms and conditions</label>
+        </div>
+        <div>
+          <p>
+            Already have an account?{" "}
+            <Link to="/login" className="hover:underline">
+              Login
+            </Link>
+          </p>
         </div>
         <input
           type="submit"
