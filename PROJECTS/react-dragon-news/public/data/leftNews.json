@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Breaking News: New COVID-19 Variant Detected",
+      "image": "../../src/assets/covid.jpg",
+      "category": "Health",
+      "publish_date": "2024-03-15"
+    },
+    {
+      "id": 2,
+      "title": "Tech Giants Face Antitrust Lawsuits",
+      "image": "../../src/assets/techgiants.jpg",
+      "category": "Business",
+      "publish_date": "2024-03-16"
+    },
+    {
+      "id": 3,
+      "title": "Climate Change Summit Concludes with Global Commitments",
+      "image": "../../src/assets/climate.jpeg",
+      "category": "Environment",
+      "publish_date": "2024-03-17"
+    },
+    {
+      "id": 4,
+      "title": "Celebrity Couple Announces Engagement",
+      "image": "../../src/assets/celebrety.jpeg ",
+      "category": "Entertainment",
+      "publish_date": "2024-03-18"
+    },
+    {
+      "id": 5,
+      "title": "Sports Update: Team Wins Championship Title",
+      "image": "../../src/assets/sports.jpeg ",
+      "category": "Sports",
+      "publish_date": "2024-03-19"
+    },
+    {
+      "id": 6,
+      "title": "World Leaders Gather for Peace Summit",
+      "image": "../../src/assets/worldleaders.jpeg",
+      "category": "Politics",
+      "publish_date": "2024-03-20"
+    }
+  ]
+  
