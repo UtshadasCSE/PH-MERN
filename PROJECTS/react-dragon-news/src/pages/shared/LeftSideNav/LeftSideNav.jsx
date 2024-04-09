@@ -37,7 +37,7 @@ const LeftSideNav = () => {
                 className={
                   parseInt(catagori.id) === 0
                     ? "bg-[#E7E7E7] w-full py-2 px-1 rounded-sm"
-                    : "text-black"
+                    : "text-[#9F9F9F]"
                 }
               >
                 {catagori.name}
