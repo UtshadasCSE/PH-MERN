@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBYusAfKUJEoMUg2ouaEOH84_ft05ZvYQw",
+  apiKey: import.meta.env.VITE_APIKEY,
   authDomain: "the-dragon-news-26882.firebaseapp.com",
   projectId: "the-dragon-news-26882",
   storageBucket: "the-dragon-news-26882.appspot.com",
