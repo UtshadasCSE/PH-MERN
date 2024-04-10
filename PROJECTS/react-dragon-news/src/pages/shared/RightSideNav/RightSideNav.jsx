@@ -3,20 +3,19 @@ import { FaGithub, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import qZone1 from "../../../assets/qZone1.png";
 import qZone2 from "../../../assets/qZone2.png";
 import qZone3 from "../../../assets/qZone3.png";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../../../firebase/firebase.comfig";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const RightSideNav = () => {
-  const googleProvider = new GoogleAuthProvider();
-  const handleGooglesignIn = () => {
-    signInWithPopup(auth, googleProvider)
+  const { googleLogin } = useContext(AuthContext);
+  const handleGoogleSignIn = () => {
+    googleLogin()
       .then((result) => {
         const user = result.user;
+        alert("Google sign in successfully");
         console.log(user);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => console.log(error));
   };
   return (
     <div>
@@ -25,7 +24,7 @@ const RightSideNav = () => {
         <h2 className="font-semibold text-xl">Login With</h2>
         <div className=" flex flex-col items-center gap-2">
           <button
-            onClick={handleGooglesignIn}
+            onClick={handleGoogleSignIn}
             className="flex items-center gap-2 border-2 px-9 py-2 rounded-lg text-[#4285F4]"
           >
             <FaGoogle className="text-[#4285F4]" />
