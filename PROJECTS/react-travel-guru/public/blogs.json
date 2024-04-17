@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "title": "Exploring the Serene Beaches of Bali",
+      "image": "../src/assets/images/bali.jpg",
+      "location": "Bali, Indonesia",
+      "review_rating": 4.8,
+      "author": "John Doe",
+      "publish_date": "2024-03-15"
+    },
+    {
+      "id": 2,
+      "title": "A Safari Adventure in the Heart of Africa",
+      "image": "../src/assets/images/amazon.jpg",
+      "location": "Kenya, Africa",
+      "review_rating": 4.5,
+      "author": "Jane Smith",
+      "publish_date": "2024-03-16"
+    },
+    {
+      "id": 3,
+      "title": "Discovering Hidden Gems in the Italian Countryside",
+      "image": "../src/assets/images/italyian.jpg",
+      "location": "Tuscany, Italy",
+      "review_rating": 4.9,
+      "author": "Michael Johnson",
+      "publish_date": "2024-03-17"
+    },
+    {
+      "id": 4,
+      "title": "Adventures in the Land of the Rising Sun: Exploring Japan",
+      "image": "../src/assets/images/japanjs.jpg",
+      "location": "Tokyo, Japan",
+      "review_rating": 4.7,
+      "author": "Emily Brown",
+      "publish_date": "2024-03-18"
+    },
+    {
+      "id": 5,
+      "title": "Trekking Through the Majestic Himalayas",
+      "image": "../src/assets/images/himayan.jpg",
+      "location": "Nepal",
+      "review_rating": 4.6,
+      "author": "David Clark",
+      "publish_date": "2024-03-19"
+    },
+    {
+      "id": 6,
+      "title": "Cultural Immersion in the Vibrant Streets of Marrakech",
+      "image": "../src/assets/images/italyian.jpg",
+      "location": "Marrakech, Morocco",
+      "review_rating": 4.8,
+      "author": "Sophia Garcia",
+      "publish_date": "2024-03-20"
+    },
+    {
+      "id": 7,
+      "title": "Exploring the Enchanting Temples of Angkor Wat",
+      "image": "../src/assets/images/angkor_wat.jpg",
+      "location": "Siem Reap, Cambodia",
+      "review_rating": 4.9,
+      "author": "Robert Williams",
+      "publish_date": "2024-03-21"
+    },
+    {
+      "id": 8,
+      "title": "A Food Lover's Guide to the Culinary Delights of Thailand",
+      "image": "../src/assets/images/thai_cuisine.jpg",
+      "location": "Bangkok, Thailand",
+      "review_rating": 4.7,
+      "author": "Emma Taylor",
+      "publish_date": "2024-03-22"
+    },
+    {
+      "id": 9,
+      "title": "Island Paradise: Exploring the Beauty of the Maldives",
+      "image": "../src/assets/images/maldives.jpg",
+      "location": "Maldives",
+      "review_rating": 4.8,
+      "author": "Christopher Lee",
+      "publish_date": "2024-03-23"
+    },
+    {
+      "id": 10,
+      "title": "A Magical Journey to the Northern Lights in Lapland",
+      "image": "../src/assets/images/lapland_northern_lights.jpg",
+      "location": "Lapland, Finland",
+      "review_rating": 4.9,
+      "author": "Olivia Anderson",
+      "publish_date": "2024-03-24"
+    }
+  ]
+  

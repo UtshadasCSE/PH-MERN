@@ -26,7 +26,7 @@ const Newsdetails = () => {
             src={
               selectedNews.image_url
                 ? selectedNews.image_url
-                : "Not Image publish"
+                : "Not Image publish date"
             }
             alt=""
           />
