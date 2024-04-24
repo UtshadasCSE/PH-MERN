@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name": "Awesome Aroma",
+        "details":"You will definitely be a fan of the design & aroma of your coffee",
+        "image": "../src/assets/images/icons/1.png"
+    },
+    {
+        "id":2,
+        "name": "High Quality",
+        "details":"We served the coffee to you maintaining the best quality",
+        "image": "../src/assets/images/icons/2.png"
+    },
+    {
+        "id":3,
+        "name": "Pure Grades",
+        "details":"The coffee is made of the green coffee beans which you will love",
+        "image": "../src/assets/images/icons/3.png"
+    },
+    {
+        "id":4,
+        "name": "Proper Roasting",
+        "details":"Your coffee is brewed by first roasting the green coffee beans",
+        "image": "../src/assets/images/icons/4.png"
+    }    
+]
