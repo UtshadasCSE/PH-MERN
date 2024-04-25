@@ -5,6 +5,12 @@ import { FaEye } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa";
 import { ImBin } from "react-icons/im";
 import Swal from "sweetalert2";
+import card1 from "../../assets/images/cups/Rectangle 10.png";
+import card2 from "../../assets/images/cups/Rectangle 11.png";
+import card3 from "../../assets/images/cups/Rectangle 12.png";
+import card4 from "../../assets/images/cups/Rectangle 13.png";
+import card5 from "../../assets/images/cups/Rectangle 14.png";
+import card6 from "../../assets/images/cups/Rectangle 15.png";
 
 const Home = () => {
   const allCoffe = useLoaderData();
@@ -58,9 +64,12 @@ const Home = () => {
             nostalgia back!! Your companion of every moment!!! Enjoy the
             beautiful moments and make them memorable.
           </p>
-          <button className="bg-[#AF8260] p-4 rounded-lg text-xl">
-            Learn More
-          </button>
+          <Link to="/register">
+            {" "}
+            <button className="bg-[#AF8260] font-mono font-bold p-4 rounded-lg text-xl hover:bg-[#331A15] hover:shadow-lg hover:shadow-yellow-900 duration-700 cursor-pointer">
+              Register Now
+            </button>
+          </Link>
         </div>
         <div className="bg-[#ECEAE3]">
           <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-8 w-4/5 mx-auto py-9 ">
@@ -88,7 +97,7 @@ const Home = () => {
             {" "}
             <Link
               to="/addcoffe"
-              className=" bg-[#E3B577] py-3 px-8 rounded flex items-center justify-center gap-2 text-white text-xl"
+              className=" bg-[#E3B577] py-3 px-8 rounded flex items-center justify-center gap-2 text-white text-xl hover:bg-[#331A15] hover:shadow-lg hover:shadow-yellow-900 duration-700 cursor-pointer"
             >
               Add Coffe
               <img className="w-6" src={cup} alt="" />
@@ -139,6 +148,160 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+          {/* images grid  */}
+          <div>
+            {/* parent  */}
+            <div>
+              {/* child  */}
+
+              <section className="bg-white  py-24 px-4 lg:px-16">
+                <div className="container mx-auto px-[12px] md:px-24 xl:px-12 max-w-[1300px] nanum2">
+                  <h1 className="text-center text-5xl pb-12 text-[#331A15]">
+                    Follow on Instagram
+                  </h1>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-28 lg:gap-y-16">
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15] rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card1}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Automotive"
+                              title="Automotive"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Expresso Zen
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15] rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card2}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Toys and Baby Products"
+                              title="Toys and Baby Products"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Mahito Expresso
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15] rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card3}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Medical"
+                              title="Medical"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Capachino Expresso
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15] rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card4}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Glass"
+                              title="Glass"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Alpha Expresso
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15]rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card5}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Jewelry Coins and Medallions"
+                              title="Jewelry Coins and Medallions"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Laren Coffee
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                      <a href="#" className="block">
+                        <div className="h-28">
+                          <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-[#331A15] rounded-xl justify-items-center align-middle">
+                            <img
+                              src={card6}
+                              className="w-full h-full   mt-6 m-auto"
+                              alt="Electric"
+                              title="Electric"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="p-6   z-10 w-full   ">
+                          <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            Electric Expresso
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
