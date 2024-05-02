@@ -1,55 +1,6 @@
-import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
-import coffeDrink from "../../assets/images/icons/coffeecup.png";
-import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-
-const Register = () => {
-  const { setUser, createUser } = useContext(AuthContext);
-  const handleFormUser = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const FirstName = form.fName.value;
-    const LastName = form.lName.value;
-    const email = form.email.value;
-    const password = form.password.value;
-    if (password.length < 6) {
-      alert("Password length should be at least 10");
-      return;
-    }
-    createUser(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const createAt = user.metadata.creationTime;
-        setUser(user);
-        console.log(user);
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Account created successfully!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        const users = { FirstName, LastName, email, createAt };
-        fetch("http://localhost:4000/users/", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(users),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          });
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
-      });
-  };
+import coffeDrink from "../../assets/images/icons/coffeecup.png";
+const Login = () => {
   return (
     <div>
       <div>
@@ -65,49 +16,15 @@ const Register = () => {
               <div className="hidden md:block w-1/2 bg-[#331A15] py-10 px-10">
                 <img src={coffeDrink} alt="" />
               </div>
-              <form
-                onSubmit={handleFormUser}
-                className="w-full md:w-1/2 py-10 px-5 md:px-10"
-              >
+              <form className="w-full md:w-1/2 py-10 px-5 md:px-10">
                 <div className="text-center mb-10">
-                  <h1 className="font-bold text-3xl text-gray-900">REGISTER</h1>
-                  <p>Enter your information to register</p>
+                  <h1 className="font-bold text-3xl text-gray-900">
+                    Login Now
+                  </h1>
+                  <p>Enter your information to Login</p>
                 </div>
                 <div>
-                  <div className="flex -mx-3">
-                    <div className="w-1/2 px-3 mb-5">
-                      <label htmlFor="" className="text-xs font-semibold px-1">
-                        First name
-                      </label>
-                      <div className="flex">
-                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                          <i className="mdi mdi-account-outline text-gray-400 text-lg"></i>
-                        </div>
-                        <input
-                          name="fName"
-                          type="text"
-                          className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                          placeholder="John"
-                        />
-                      </div>
-                    </div>
-                    <div className="w-1/2 px-3 mb-5">
-                      <label htmlFor="" className="text-xs font-semibold px-1">
-                        Last name
-                      </label>
-                      <div className="flex">
-                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                          <i className="mdi mdi-account-outline text-gray-400 text-lg"></i>
-                        </div>
-                        <input
-                          name="lName"
-                          type="text"
-                          className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                          placeholder="Smith"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <div className="flex -mx-3"></div>
                   <div className="flex -mx-3">
                     <div className="w-full px-3 mb-5">
                       <label htmlFor="" className="text-xs font-semibold px-1">
@@ -144,12 +61,7 @@ const Register = () => {
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <p className="flex gap-2 pb-3">
-                      <input type="checkbox" name="termsBox" id="" />
-                      <span>Accept our T&C</span>
-                    </p>
-                  </div>
+
                   <div className="flex -mx-3">
                     <div className="w-full px-3 mb-5">
                       <button
@@ -162,12 +74,12 @@ const Register = () => {
                   </div>
                   <div className="flex justify-center">
                     <p>
-                      Already have an account?{" "}
+                      Dont have an account?{" "}
                       <Link
-                        to="/login"
+                        to="/register"
                         className="text-[#D2B48C] font-semibold hover:underline cursor-pointer"
                       >
-                        Login now
+                        Register now
                       </Link>
                     </p>
                   </div>
@@ -197,4 +109,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

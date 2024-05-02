@@ -6,6 +6,7 @@ import Home from "../pages/Home/Home";
 import CoffeDetails from "../components/CoffeDetails/CoffeDetails";
 import Register from "../components/Register/Register";
 import Users from "../components/Users/Users";
+import Login from "../components/Login/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         path: "/users",
         element: <Users />,
         loader: () => fetch("http://localhost:4000/users"),
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

@@ -66,8 +66,8 @@ const Home = () => {
           </p>
           <Link to="/register">
             {" "}
-            <button className="bg-[#AF8260] font-mono font-bold p-4 rounded-lg text-xl hover:bg-[#331A15] hover:shadow-lg hover:shadow-yellow-900 duration-700 cursor-pointer">
-              Register Now
+            <button className="bg-[#AF8260] font-bold p-4 rounded-lg text-xl hover:bg-[#331A15] hover:shadow-lg hover:shadow-yellow-900 duration-700 cursor-pointer">
+              Learn More
             </button>
           </Link>
         </div>
