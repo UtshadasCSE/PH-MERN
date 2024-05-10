@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import axios from "axios";
 const AddCoffe = () => {
   const handleAddCoffe = (event) => {
     event.preventDefault();
@@ -19,29 +20,44 @@ const AddCoffe = () => {
       cDetails,
       photoUrl,
     };
+    // send data using axios
+    axios.post("http://localhost:4000/coffe", newCoffe).then((data) => {
+      console.log(data.data);
+      if (data.data.insertedId) {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "New coffe added!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+
+      form.reset();
+    });
 
     // send data to the db
-    fetch("http://localhost:4000/coffe", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newCoffe),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "New coffe added!",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        }
-        console.log(data);
-        form.reset();
-      });
+    // fetch("http://localhost:4000/coffe", {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(newCoffe),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.insertedId) {
+    //       Swal.fire({
+    //         position: "top-center",
+    //         icon: "success",
+    //         title: "New coffe added!",
+    //         showConfirmButton: false,
+    //         timer: 1500,
+    //       });
+    //     }
+    //     console.log(data);
+    //     form.reset();
+    //   });
   };
   return (
     <div>
