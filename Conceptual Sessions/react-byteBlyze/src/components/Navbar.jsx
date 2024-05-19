@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [themes, setThemes] = useState("light");
   const handleThemes = (e) => {
@@ -8,10 +9,17 @@ const Navbar = () => {
       setThemes("light");
     }
   };
+  // save the theme in the local storage
+  useEffect(() => {
+    localStorage.setItem("theme", themes);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }),
+    [themes];
   console.log(themes);
   return (
     <div>
-      <nav>
+      <nav className="h-16">
         <div className="navbar bg-base-100 shadow-lg px-9 fixed z-10">
           <div className="flex-1">
             <a className="btn btn-ghost text-xl font-bold gap-0 text-secondary normal-case">
@@ -19,19 +27,36 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex-none">
-            <ul className="menu menu-horizontal px-1 text-[#1f2937] font-semibold">
-              <li className="text-primary">
-                <a>Home</a>
-              </li>
-              <li>
-                <a>Blogs</a>
-              </li>
-              <li>
-                <a>Bookmarks</a>
-              </li>
+            <ul className="menu menu-horizontal px-1 flex gap-4  font-semibold">
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : "font-bold"
+                }
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                to={"/blogs"}
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : "font-bold"
+                }
+              >
+                Blogs
+              </NavLink>
+
+              <NavLink
+                to={"/bookmarks"}
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : "font-bold"
+                }
+              >
+                Bookmarks
+              </NavLink>
             </ul>
             {/* theme button  */}
-            <label className="flex cursor-pointer gap-2">
+            <label className="flex cursor-pointer gap-2 ml-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
