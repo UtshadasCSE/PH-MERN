@@ -8,7 +8,7 @@ const Footer = () => {
               Byte<span className="text-primary">Blaze</span>
             </a>
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech blogs since 1992
           </p>
         </aside>
         <nav>
