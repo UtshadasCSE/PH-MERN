@@ -11,6 +11,7 @@ export default {
         slider1: 'url("./src/assets/image/headphone.jpg")',
         slider2: 'url("./src/assets/image/radio.jpg")',
         slider3: 'url("./src/assets/image/smartwatch.jpg")',
+        myCart: 'url("./src/assets/image/gadgetsmycart.jpg")',
       },
     },
   },

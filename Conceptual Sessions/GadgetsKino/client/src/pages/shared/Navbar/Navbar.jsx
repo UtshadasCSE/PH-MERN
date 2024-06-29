@@ -1,8 +1,31 @@
 import { Link, NavLink } from "react-router-dom";
 import AuthBtn from "../../../components/AuthBtn/AuthBtn";
 import logo from "../../../assets/icon/gklogo.png";
+import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logoutUser } = useAuth();
+  const handleLogoutBtn = () => {
+    logoutUser()
+      .then(() => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Successfully logout from this device!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong! Please try again later",
+        });
+        console.log(error);
+      });
+  };
   const navLinks = (
     <>
       <li>
@@ -25,6 +48,19 @@ const Navbar = () => {
           Add Product
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to={"/myproduct"}
+            className={({ isActive }) =>
+              isActive ? "text-[#7209B7] border-b-2 border-[#F72585]" : ""
+            }
+          >
+            My Product
+          </NavLink>
+        </li>
+      )}
+
       <li>
         <NavLink
           to={"/about"}
@@ -86,14 +122,48 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow w-max"
               >
                 {navLinks}
-                <Link to={"/login"} className="">
+                <Link to={"/signin"} className="">
                   <AuthBtn />
                 </Link>
               </ul>
             </div>
-            <Link to={"/login"} className="max-sm:hidden">
-              <AuthBtn />
-            </Link>
+            {user ? (
+              <>
+                {" "}
+                <div className="dropdown dropdown-end">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img
+                        alt="Tailwind CSS Navbar component"
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      />
+                    </div>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] mt-3 w-52 p-2 shadow"
+                  >
+                    <li>
+                      <a>Settings</a>
+                    </li>
+                    <li>
+                      <button onClick={handleLogoutBtn}>Logout</button>
+                    </li>
+                  </ul>
+                </div>
+              </>
+            ) : (
+              <>
+                {" "}
+                <Link to={"/signin"} className="max-sm:hidden">
+                  <AuthBtn />
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </nav>
