@@ -1,4 +1,5 @@
 import FeatureBrand from "../FeaturedBrand/FeatureBrand";
+import PopularProduct from "../PopularProduct/PopularProduct";
 import Slider from "../Slider/Slider";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Slider />
       <FeatureBrand />
+      <PopularProduct />
     </div>
   );
 };

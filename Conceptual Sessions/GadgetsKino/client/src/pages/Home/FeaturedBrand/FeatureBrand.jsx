@@ -4,10 +4,10 @@ const FeatureBrand = () => {
   return (
     <div className="w-11/12 mx-auto py-12">
       <div className="py-3">
-        <Title />
+        <Title heading={"Top Brands"} subHeading={"Browse by Brand"} />
       </div>
       <div className="font-poppins">
-        <div className="grid grid-cols-5 max-sm:grid-cols-1 gap-5">
+        <div className="grid grid-cols-5 max-sm:grid-cols-2 gap-5">
           {/* child  */}
           <div className=" rounded-md shadow-md ">
             <img

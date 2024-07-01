@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -43,23 +43,20 @@ async function run() {
       res.send(result);
     });
     // get product by rating
-    app.get("/populars", async (req, res) => {
-      const result = await productCollection.aggregate([
-        {
-          $addFields: {
-            ratingNum: { $toDouble: "$rating" }, // Convert rating string to double
-          },
-        },
-        {
-          $sort: { ratingNum: -1 }, // Sort by the converted ratingNum field in descending order
-        },
-        {
-          $limit: 5, // Change the limit as needed
-        },
-      ]);
+    app.get("/products", async (req, res) => {
+      const result = await productCollection
+        .find()
+        .sort({ rating: -1 })
+        .limit(10)
+        .toArray();
       res.send(result);
     });
-
+    // show details one
+    app.get("/details/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await productCollection.findOne({ _id: new ObjectId(id) });
+      res.send(result);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
