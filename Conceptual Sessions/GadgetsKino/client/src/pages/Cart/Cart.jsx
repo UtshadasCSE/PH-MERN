@@ -1,11 +1,35 @@
 import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import toast, { Toaster } from "react-hot-toast";
 
 const Cart = () => {
+  const axiosSecure = useAxiosSecure();
   const itemData = useLoaderData();
   const { data } = itemData;
   console.log(data);
+  const handleAddCart = (data) => {
+    const cartItem = {
+      productName: data.productName,
+      imageUrl: data.imageUrl,
+      email: data.email,
+      category: data.category,
+      description: data.description,
+      rating: data.rating,
+      price: data.price,
+    };
+    axiosSecure
+      .post("/carts", cartItem)
+      .then((res) => {
+        if (res.data.insertedId) {
+          toast.success("Added cart successfully!");
+        }
+      })
+      .catch((err) => {
+        toast.error(`${err}! Please try again later`);
+      });
+  };
   return (
     <div>
       <div className="container mx-auto mt-10 font-poppins">
@@ -70,13 +94,17 @@ const Cart = () => {
               </p>
             </div>
             <div className="border-t mt-8">
-              <button className="bg-[#7209B7] font-semibold hover:bg-[#F72585] py-3 text-sm text-white uppercase w-full">
+              <button
+                onClick={() => handleAddCart(data)}
+                className="bg-[#7209B7] font-semibold hover:bg-[#F72585] py-3 text-sm text-white uppercase w-full"
+              >
                 Add to cart
               </button>
             </div>
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

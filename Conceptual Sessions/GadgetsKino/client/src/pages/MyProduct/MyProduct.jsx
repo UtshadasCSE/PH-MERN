@@ -4,10 +4,12 @@ import useAuth from "../../hooks/useAuth";
 import { AiFillProduct } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
 import { GrDocumentUpdate } from "react-icons/gr";
+import Swal from "sweetalert2";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const MyProduct = () => {
   const axiosSecure = useAxiosSecure();
-  const { user } = useAuth();
 
   const { data: myproduct = [] } = useQuery({
     queryKey: ["myproduct"],
@@ -16,7 +18,30 @@ const MyProduct = () => {
       return res.data;
     },
   });
-  console.log(myproduct);
+  const handleDeleteProduct = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/products/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
   return (
     <div className="font-poppins">
       <div className="relative h-[50vh] bg-myCart bg-cover bg-center bg-no-repeat py-8">
@@ -47,11 +72,17 @@ const MyProduct = () => {
                   <h2 className="card-title">{item.productName}</h2>
                   <p>{item.description}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary text-white">
+                    <Link
+                      to={`/update/${item._id}`}
+                      className="btn btn-primary text-white"
+                    >
                       <GrDocumentUpdate />
                       Update
-                    </button>
-                    <button className="btn  bg-error text-white">
+                    </Link>
+                    <button
+                      onClick={() => handleDeleteProduct(item._id)}
+                      className="btn  bg-error text-white"
+                    >
                       <MdDeleteForever />
                       Delete
                     </button>

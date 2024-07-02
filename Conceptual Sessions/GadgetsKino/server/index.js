@@ -28,6 +28,7 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     const productCollection = client.db("GadgetsKinoo").collection("products");
+    const cartctCollection = client.db("GadgetsKinoo").collection("carts");
 
     //add product in DB
     app.post("/products", async (req, res) => {
@@ -57,6 +58,35 @@ async function run() {
       const result = await productCollection.findOne({ _id: new ObjectId(id) });
       res.send(result);
     });
+    // store cart data in db
+    app.post("/carts", async (req, res) => {
+      const cartItem = req.body;
+      const result = await cartctCollection.insertOne(cartItem);
+      res.send(result);
+    });
+    // show cart using user email
+    app.get("/carts", async (req, res) => {
+      const email = req.query.email;
+      const result = await cartctCollection.find({ email: email }).toArray();
+      res.send(result);
+    });
+    // delete item from db using id
+    app.delete("/products/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await productCollection.deleteOne({
+        _id: new ObjectId(id),
+      });
+      res.send(result);
+    });
+    // update data using id
+    app.get("/update/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await productCollection
+        .find({ _id: new ObjectId(id) })
+        .toArray();
+      res.send(result);
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(

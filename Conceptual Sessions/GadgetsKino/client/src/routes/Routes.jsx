@@ -9,6 +9,8 @@ import Errorpage from "../pages/Errorpage/Errorpage";
 import MyProduct from "../pages/MyProduct/MyProduct";
 import Cart from "../pages/Cart/Cart";
 import axios from "axios";
+import ProductCart from "./../pages/ProductCart/ProductCart";
+import Update from "../pages/Update/Update";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,10 +35,24 @@ const router = createBrowserRouter([
         element: <MyProduct />,
       },
       {
+        path: "/cart",
+        element: <ProductCart />,
+      },
+      {
         path: "/details/:id",
-        element: <Cart />,
+        element: (
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           axios.get(`http://localhost:3000/details/${params.id}`),
+      },
+      {
+        path: "/update/:id",
+        element: <Update />,
+        loader: ({ params }) =>
+          axios.get(`http://localhost:3000/update/${params.id}`),
       },
       {
         path: "/signup",
