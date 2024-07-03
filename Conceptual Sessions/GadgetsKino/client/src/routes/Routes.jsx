@@ -46,13 +46,13 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          axios.get(`http://localhost:3000/details/${params.id}`),
+          axios.get(`https://gadgetskinooo.vercel.app/${params.id}`),
       },
       {
         path: "/update/:id",
         element: <Update />,
         loader: ({ params }) =>
-          axios.get(`http://localhost:3000/update/${params.id}`),
+          axios.get(`https://gadgetskinooo.vercel.app/${params.id}`),
       },
       {
         path: "/signup",

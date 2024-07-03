@@ -7,8 +7,16 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // middleware
-app.use(cors());
 app.use(express.json());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://gadgetskinooo.web.app",
+      "https://gadgetskinooo.firebaseapp.com",
+    ],
+  })
+);
 
 // ===========MongoDB Start============
 
@@ -26,7 +34,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
     const productCollection = client.db("GadgetsKinoo").collection("products");
     const cartctCollection = client.db("GadgetsKinoo").collection("carts");
 
@@ -88,7 +96,7 @@ async function run() {
     });
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );

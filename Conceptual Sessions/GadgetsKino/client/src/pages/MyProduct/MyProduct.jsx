@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import useAuth from "../../hooks/useAuth";
+
 import { AiFillProduct } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
 import { GrDocumentUpdate } from "react-icons/gr";
 import Swal from "sweetalert2";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 const MyProduct = () => {
