@@ -48,7 +48,7 @@ const Slider = () => {
         <SwiperSlide>
           {" "}
           <div className="py-5 w-full font-poppins">
-            <div className="relative h-[70vh] max-sm:h-screen w-full py-3 bg-slide1 bg-center bg-cover">
+            <div className="relative h-[70vh] max-sm:h-screen w-full py-3 bg-slide2 bg-center bg-cover">
               <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
               <div className="relative z-20 flex flex-col items-center justify-center gap-5 h-full text-white">
                 <h1 className="text-4xl text-[#F1FAEE] font-bold">
@@ -75,7 +75,7 @@ const Slider = () => {
         <SwiperSlide>
           {" "}
           <div className="py-5 w-full font-poppins">
-            <div className="relative h-[70vh] max-sm:h-screen w-full py-3 bg-slide1 bg-center bg-cover">
+            <div className="relative h-[70vh] max-sm:h-screen w-full py-3 bg-slide3 bg-center bg-cover">
               <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
               <div className="relative z-20 flex flex-col items-center justify-center gap-5 h-full text-white">
                 <h1 className="text-4xl text-[#F1FAEE] font-bold">
