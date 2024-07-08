@@ -3,18 +3,26 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
 
 const Signin = () => {
-  const { signinUser, googleLogin } = useAuth();
+  const { loading, user, signinUser, googleLogin } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  let from = location.state?.from?.pathname || "/";
   const {
     reset,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  let from = location.state?.from?.pathname || "/";
+  // force user to go home route when try to login
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [navigate, user]);
+  if (user || loading) return;
   // get form data using react form
   const onSubmit = (data) => {
     signinUser(data.email, data.password)
@@ -59,6 +67,7 @@ const Signin = () => {
         toast.error(errorCode, errorMessage);
       });
   };
+
   // sign up background image
   const backgroundImageStyle = {
     backgroundImage: "url('https://i.ibb.co/KwDZxk4/register.png')",

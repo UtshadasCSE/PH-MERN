@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -31,12 +31,69 @@ async function run() {
     */
     const jobCollection = client.db("JobfinderBD").collection("jobs");
     const bidCollection = client.db("JobfinderBD").collection("bids");
+    // save a jobs in db
+    app.post("/jobs", async (req, res) => {
+      const jobData = req.body;
+      const result = await jobCollection.insertOne(jobData);
+      res.send(result);
+    });
     // get all jobs data from the db
     app.get("/jobs", async (req, res) => {
       const result = await jobCollection.find().toArray();
       res.send(result);
     });
+
+    // get jobs by user
+    app.get("/my-jobs/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { buyer_email: email };
+      const result = await jobCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    // get single job data from db using id
+    app.get("/jobs/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await jobCollection.findOne({ _id: new ObjectId(id) });
+      res.send(result);
+    });
+    // store the bidData in the DB
+    app.post("/bids", async (req, res) => {
+      const bidData = req.body;
+      console.log(bidData);
+      const result = await bidCollection.insertOne(bidData);
+      res.send(result);
+    });
+    // update job data to the database
+    app.put("/update/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedData = req.body;
+      const query = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updateDoc = {
+        $set: {
+          ...updatedData,
+        },
+      };
+      const result = await jobCollection.updateOne(query, updateDoc, options);
+      res.send(result);
+    });
+    // delete job from db
+    app.delete("/jobs/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await jobCollection.deleteOne({ _id: new ObjectId(id) });
+      res.send(result);
+    });
+    // get bids by user email from db
+    app.get("/my-bids/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { buyer_email: email };
+      const result = await bidCollection.find(query).toArray();
+      res.send(result);
+    });
+    /*
     // Send a ping to confirm a successful connection
+    */
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"

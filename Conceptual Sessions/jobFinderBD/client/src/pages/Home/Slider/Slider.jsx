@@ -8,6 +8,7 @@ import "./slide.css";
 import { Navigation } from "swiper/modules";
 import { MdArrowOutward } from "react-icons/md";
 import { useTypewriter } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   // react type writer
@@ -33,10 +34,13 @@ const Slider = () => {
                   opportunities across various industries.
                 </p>
                 <div className="flex gap-3">
-                  <button className="btn btn-active bg-[#F1FAEE] text-[#E63946]">
+                  <Link
+                    to={"/all-jobs"}
+                    className="btn btn-active bg-[#F1FAEE] text-[#E63946]"
+                  >
                     Find Jobs
                     <MdArrowOutward />
-                  </button>
+                  </Link>
                   <button className="btn btn-outline border-[#E63946] text-[#F1FAEE] hover:bg-[#E63946] hover:border-none">
                     Explore Now
                   </button>

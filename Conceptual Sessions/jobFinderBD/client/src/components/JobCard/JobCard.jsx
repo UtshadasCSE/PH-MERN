@@ -14,7 +14,7 @@ const JobCard = ({ job }) => {
     <div className="py-3">
       {/* parent  */}
       <Link
-        to={`/job/${_id}`}
+        to={`/jobs/${_id}`}
         className="font-poppins flex flex-col gap-2 w-96 py-5 border-2 px-6 rounded-xl"
       >
         <div className="flex justify-between">

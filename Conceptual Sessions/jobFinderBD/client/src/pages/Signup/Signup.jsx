@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import useAuth from "./../../hooks/useAuth";
 import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
 
 const Signup = () => {
-  const { createUser, updateUserInfo, googleLogin } = useAuth();
+  const { loading, user, createUser, updateUserInfo, googleLogin } = useAuth();
   const navigate = useNavigate();
   const {
     reset,
@@ -14,6 +15,13 @@ const Signup = () => {
 
     formState: { errors },
   } = useForm();
+  // force user go to home route when serchh for sign up
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [navigate, user]);
+  if (user || loading) return;
   //   get form data using react form hook
   const onSubmit = (data) => {
     const userData = {
