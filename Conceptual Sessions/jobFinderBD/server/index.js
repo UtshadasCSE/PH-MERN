@@ -31,6 +31,8 @@ async function run() {
     */
     const jobCollection = client.db("JobfinderBD").collection("jobs");
     const bidCollection = client.db("JobfinderBD").collection("bids");
+    // JWT Generate
+
     // save a jobs in db
     app.post("/jobs", async (req, res) => {
       const jobData = req.body;
@@ -87,8 +89,26 @@ async function run() {
     // get bids by user email from db
     app.get("/my-bids/:email", async (req, res) => {
       const email = req.params.email;
+      const query = { email: email };
+      const result = await bidCollection.find(query).toArray();
+      res.send(result);
+    });
+    // get all bid request data by buyer email from db
+    app.get("/bid-requests/:email", async (req, res) => {
+      const email = req.params.email;
       const query = { buyer_email: email };
       const result = await bidCollection.find(query).toArray();
+      res.send(result);
+    });
+    // update bid status
+    app.patch("/bid/:id", async (req, res) => {
+      const id = req.params.id;
+      const status = req.body;
+      const query = { _id: new ObjectId(id) };
+      const updateDoc = {
+        $set: status,
+      };
+      const result = await bidCollection.updateOne(query, updateDoc);
       res.send(result);
     });
     /*
