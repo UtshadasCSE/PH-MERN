@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
+import axios from "axios";
 
 const Signin = () => {
   const { loading, user, signinUser, googleLogin } = useAuth();
@@ -29,6 +30,7 @@ const Signin = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        const email = user.email;
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -36,6 +38,13 @@ const Signin = () => {
           showConfirmButton: false,
           timer: 1500,
         });
+        // get access token
+        const loggedInUser = { email };
+        axios
+          .post(`${import.meta.env.VITE_API_URL}/jwt`, loggedInUser, {
+            withCredentials: true,
+          })
+          .then((res) => console.log(res.data));
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -51,6 +60,7 @@ const Signin = () => {
     googleLogin()
       .then((result) => {
         const user = result.user;
+        const email = user.email;
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -58,6 +68,14 @@ const Signin = () => {
           showConfirmButton: false,
           timer: 1500,
         });
+
+        // get access token
+        const loggedInUser = { email };
+        axios
+          .post(`${import.meta.env.VITE_API_URL}/jwt`, loggedInUser, {
+            withCredentials: true,
+          })
+          .then((res) => console.log(res.data));
         navigate(from, { replace: true });
       })
       .catch((error) => {

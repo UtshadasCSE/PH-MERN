@@ -23,7 +23,7 @@ const TabSection = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-5 ">
+          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-4 ">
             {jobs
               .filter((job) => job.category === "Web Development")
               .slice(0, 5)
@@ -33,7 +33,7 @@ const TabSection = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-5 ">
+          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-4 ">
             {jobs
               .filter((job) => job.category === "Graphic Design")
               .slice(0, 5)
@@ -43,7 +43,7 @@ const TabSection = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-5 ">
+          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-4 ">
             {jobs
               .filter((job) => job.category === "Digital Marketing")
               .slice(0, 5)

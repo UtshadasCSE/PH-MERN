@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
@@ -8,7 +10,13 @@ const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cookieParser());
+app.use(
+  cors({
+    origin: ["http://localhost:5173"],
+    credentials: true,
+  })
+);
 
 // ======MongoDB Start======
 
@@ -32,6 +40,19 @@ async function run() {
     const jobCollection = client.db("JobfinderBD").collection("jobs");
     const bidCollection = client.db("JobfinderBD").collection("bids");
     // JWT Generate
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: "7d",
+      });
+      res
+        .cookie("token", token, {
+          httpOnly: true,
+          secure: false,
+          sameSite: "none",
+        })
+        .send({ success: true });
+    });
 
     // save a jobs in db
     app.post("/jobs", async (req, res) => {
