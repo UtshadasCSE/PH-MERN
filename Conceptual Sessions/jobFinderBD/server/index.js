@@ -10,13 +10,14 @@ const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
-app.use(cookieParser());
+
 app.use(
   cors({
     origin: ["http://localhost:5173"],
     credentials: true,
   })
 );
+app.use(cookieParser());
 
 // ======MongoDB Start======
 
@@ -53,7 +54,17 @@ async function run() {
         })
         .send({ success: true });
     });
-
+    // clear cokkeis
+    app.get("/logout", (req, res) => {
+      res
+        .clearCookie("token", {
+          httpOnly: true,
+          secure: false,
+          sameSite: "none",
+          maxAge: 0,
+        })
+        .send({ success: true });
+    });
     // save a jobs in db
     app.post("/jobs", async (req, res) => {
       const jobData = req.body;
@@ -68,6 +79,8 @@ async function run() {
 
     // get jobs by user
     app.get("/my-jobs/:email", async (req, res) => {
+      const token = req.cookies?.token;
+      console.log(token);
       const email = req.params.email;
       const query = { buyer_email: email };
       const result = await jobCollection.find(query).toArray();
@@ -83,7 +96,15 @@ async function run() {
     // store the bidData in the DB
     app.post("/bids", async (req, res) => {
       const bidData = req.body;
-      console.log(bidData);
+      // check if data already in db
+      const query = {
+        email: bidData.email,
+        jobId: bidData.jobId,
+      };
+      // const alreadyApplied = await bidCollection.findOne(query);
+      // if (alreadyApplied) {
+      //   return res.status(400).send("Already applied this job!");
+      // }
       const result = await bidCollection.insertOne(bidData);
       res.send(result);
     });
@@ -131,6 +152,11 @@ async function run() {
       };
       const result = await bidCollection.updateOne(query, updateDoc);
       res.send(result);
+    });
+    // get jobs by count for pagination
+    app.get("/jobs-count", async (req, res) => {
+      const count = await jobCollection.countDocuments();
+      res.send({ count });
     });
     /*
     // Send a ping to confirm a successful connection
